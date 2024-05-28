@@ -1,2 +1,2 @@
 # Book Tracker API
-This file is the main page of the Book Tracker API documentation. 
+The book tracker documentation is in progress. To learn more about this API, contact your sales representative. 
