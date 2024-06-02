@@ -1,0 +1,114 @@
+{
+  "books": [
+    {
+      "title": "The Mysteries of Pittsburgh",
+      "author_last_name": "Chabon",
+      "author_first_name": "Michael",
+      "publisher": "Open Road Media",
+      "year_published": 2011,
+      "ISBN-10": 9781453234099,
+      "genre": "fiction",
+      "book_id": 1
+    },
+    {
+      "title": "Fight Club: A Novel",
+      "author_last_name": "Palahniuk",
+      "author_first_name": "Chuck",
+      "publisher": "W. W. Norton",
+      "year_published": 2005,
+      "ISBN-10": 9780393066395,
+      "genre": "fiction",
+      "book_id": 2
+    },
+    {
+      "title": "Infinite Jest",
+      "author_last_name": "Wallace",
+      "author_first_name": "David Foster",
+      "publisher": "Little, Brown",
+      "year_published": 1996,
+      "ISBN-10": 9780316073851,
+      "genre": "fiction",
+      "book_id": 3
+    },
+    {
+      "title": "The Power Broker: Robert Moses and the Fall of New York",
+      "author_last_name": "Caro",
+      "author_first_name": "Robert A.",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 1974,
+      "ISBN-10": 9780394480763,
+      "genre": "non-fiction",
+      "book_id": 4
+    },
+    {
+      "title": "Mastering the Art of French Cooking, Vol. 1",
+      "author_last_name": "Child",
+      "author_first_name": "Julia",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 2011,
+      "ISBN-10": 9780307958174,
+      "genre": "cookbooks",
+      "book_id": 5
+    },
+  ],
+  "customers": [
+    {
+      "last_name": "Smith",
+      "first_name": "Brian",
+      "telephone": 2122371641,
+      "email": "brian.smith@fastmail.com",
+      "customer_id": 1,
+    },
+    {
+      "last_name": "Jones",
+      "first_name": "Jenny",
+      "telephone": 7187451673,
+      "email": "jjones@proton.me",
+      "customer_id": 2,
+    },
+    {
+      "last_name": "Rafferty",
+      "first_name": "Terrence",
+      "telephone": 9176636448,
+      "email": "raffterr@aol.com",
+      "customer_id": 3,
+    },
+    {
+      "last_name": "Jameson",
+      "first_name": "Michael",
+      "telephone": 2018724543,
+      "email": "mjameson@gmail.com",
+      "customer_id": 4,
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 1,
+      "order_date": "2023-06-02",
+      "items": 3,
+      "customer_id": 2, 
+      "book_id": [1,2,3]
+    },
+    {
+      "order_id": 2,
+      "order_date": "2024-02-22",
+      "number_of_items": 1,
+      "customer_id": 3, 
+      "book_id": [2]
+    },
+    {
+      "order_id": 3,
+      "order_date": "2023-12-20",
+      "items": 2,
+      "customer_id": 4, 
+      "book_id": [2,4]
+    },
+    {
+      "order_id": 4,
+      "order_date": "2024-4-19",
+      "items": 1,
+      "customer_id": 3, 
+      "book_id": [1]
+    }
+  ]
+}

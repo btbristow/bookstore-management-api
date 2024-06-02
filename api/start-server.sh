@@ -1,2 +1,2 @@
 #!/bin/bash
-json-server -w book-tracker.json
+json-server -w bookstore-management.json
