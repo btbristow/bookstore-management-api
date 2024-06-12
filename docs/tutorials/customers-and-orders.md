@@ -1,32 +1,25 @@
 ---
 layout: page
 ---
-# Work with Customers and Orders
+# Manage Customers and Orders
 
-This tutorial presents a complete customer and order management workflow for the Bookstore Management API. It guides you through obtaining a list of books in stock, creating a customer, and creating an order that references the customer and the books purchased.
+This tutorial presents a complete customer and order management workflow for the Bookstore Management API. It guides you through obtaining a list of books in stock, creating a customer, and then creating an order that references both the customer you created and the books they purchased.
 
-Expect this tutorial to take about 20 minutes to complete.
+This tutorial takes about 20 minutes to complete.
 
 ## Prerequisites
 
-To complete these tasks, you must have command line access to cURL and access to the Bookstore Management API endpoints, either integrated with your test environment or running locally as a mock server, via [json-server](https://www.npmjs.com/package/json-server).
+To complete these steps, you must have command line access to cURL and access to the Bookstore Management API endpoints, either integrated with your test environment or running locally as a mock server.
 
-To use the mock server method, install json-server and download the [API folder](https://github.com/btbristow/bookstore-management-api/tree/4227e30164eb37172b024df7f1dd5400c6e454b2/api) from our repository. On the command line, run the appropriate script for your system: `start-server.bat` on Windows or `start-server.sh` on Mac or Linux.
+For more information, see [Test the Bookstore Management API](tutorials/test-bookstore-api.md).
 
-For example, on Mac, run `./json-server.sh`. 
+## Step 1: Get your book inventory
 
-> **Note:**
-> When running json-server on your local machine, port 3000 must be available.
+Before you can add a book to an order, you must know the `book_id` of the book being purchased. We will use the `GET` method with `/books` to obtain a list of books.
 
-## Get your book inventory
+To list the books in stock, on the command line, enter `curl -X GET {server_url}:{port}/books`.
 
-Before you can add a book to an order, you must know the `book_id`, so start with a `GET` request to the `/books` endpoint to list the books in stock.
-
-#### To list the books in stock:
-
-On the command line, enter `curl -X GET {server_url}:{port}/books`.
-
-The Bookstore Management API returns a `200 OK` along with a JSON response body in the following format. For property definitions, see [Books endpoint](../reference/books.md#response-example).
+The Bookstore Management API returns a `200 OK` along with a response body in the following format:
 
 ```json
 {
@@ -39,17 +32,17 @@ The Bookstore Management API returns a `200 OK` along with a JSON response body 
     "genre": "cookbooks",
     "format": "hardcover",
     "in_stock": 1,
-    "book_id": 5, # Note for use in the order request
+    "book_id": 5,
 }
 ```
 
-## Create a customer
+Note the `book_id` for use in the order you will create.
 
-When creating an order, you must specify a customer. We will use the `POST` method with `/customers` to create a new customer who has not visited the store.
+## Step 2: Create a customer
 
-#### To create a customer:
+When creating an order, you must also specify a customer. We will use the `POST` method with `/customers` to create a new customer who has not yet visited the store.
 
-On the command line, enter the following cURL request:
+To create a customer, on the command line, enter the following cURL request:
 
 ```bash
 curl -X POST '{server_url}:{port}/customers' \
@@ -62,21 +55,26 @@ curl -X POST '{server_url}:{port}/customers' \
     }'
 ```
 
-The Bookstore Management API returns a `201 Created`, along with the following response body:
+The Bookstore Management API returns a `201 Created`, along with a response body like the following:
 
 ```json
 {
     "status": "PASS",
     "message": "Customer created",
-    "customer_id": 4 # Note for use in the order request
+    "customer_id": 4
 }
 ```
 
-## Create an order
+Note the `customer_id` for use in the order.
 
-Now that you know the book to purchase and the customer who will purchase it, create an order using `POST orders`.
+## Step 3: Create an order
 
-On the command line, enter the following cURL request:
+Now that you know the book to purchase and the customer who will purchase it, you can create a new order by using the `POST` method with `/orders`.
+
+> **Note:**  
+> In the sample, note that `book_id` is an array which supports multiple values. For example, to add multiple books, you might use: `[2, 5]`.
+
+To create a new order, on the command line, enter the following cURL request:
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \
@@ -89,7 +87,7 @@ curl -X POST '{server_url}:{port}/orders' \
     }'
 ```
 
-The Bookstore Management API returns a `201 Created`, along with the following response body:
+The Bookstore Management API returns a `201 Created`, along with a response body like the following:
 
 ```json
 {
@@ -99,13 +97,9 @@ The Bookstore Management API returns a `201 Created`, along with the following r
 }
 ```
 
-
-> **Tip:**  
-> To add multiple books to an order, pass them in an array. For example, use `[2, 5]`.
-
 ## What to do next
 
-Now that you have created books, customers, and orders, you can proceed with your integration or learn more about the Bookstore Management API. The following topics provide next steps.
+Now that you have completed this tutorial, either proceed with your integration or read other topics to learn more about the Bookstore Management API.
 
 * [Update your store inventory](update-store-inventory.md)
 * [Work with customers](work-with-customers.md)

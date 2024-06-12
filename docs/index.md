@@ -5,6 +5,8 @@ layout: page
 
 ## Tutorials
 
+- [Test the Bookstore Management API](tutorials/test-bookstore-api.md)
+- [Get Started with the Bookstore Management API](tutorials/get-started.md)
 - [Work with customers and orders](tutorials/customers-and-orders.md)
 
 ## Reference
