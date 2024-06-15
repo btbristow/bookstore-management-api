@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Books endpoint
 
 Use the `books` endpoint when building UI components that enable users to manage their store inventories. For example, build a feature that gets a list of books in stock. Or, add a form where users add new books from a delivery.
