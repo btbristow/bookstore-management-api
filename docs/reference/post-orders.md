@@ -3,11 +3,11 @@ layout: page
 ---
 # POST orders
 
-Use `POST` with the `orders` endpoint to create new orders. You can add one or more orders to the request body. You must [create customers](post-customers.md) before you can create orders. In addition,orders must contain at least one `book_id`.
+Use `POST` with the `orders` endpoint to create new orders. You can add multiple orders to a request body. Orders must contain at least one `book_id` and `customer_id` as described in [Create an order](../tutorials/create-an-order.md)
 
 ## Request
 
-To create an order with the `POST orders` method, use the following cURL request.
+To `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}` values, as well as valid `book_id` and `customer_id` properties:
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \
@@ -22,30 +22,21 @@ curl -X POST '{server_url}:{port}/orders' \
 
 ## Response
 
-The following sections contain an example success response, along with error response codes.
+The following sections list the success and error responses that the `POST orders` method supports.
 
 ### Success response code
 
-When your `POST` request is successful, the Bookstore Management API returns a `201 Created`, along with the following response body.
+A successful `POST` returns `201 Created` along with the complete book object, including a new `id` property (for example, `"id": "3f50"`).
 
-```json
-{
-    "order_date": "2023-06-15",
-    "items": 2,
-    "customer_id": 1,
-    "order_id": [3, 5]
-}
-```
+### Error response
 
-### Error response codes
+An error response contains one of the following HTTP response status codes.
 
-When your `POST` request is unsuccessful, the Bookstore Management API returns one of the following response codes.
-
-| Response Code | Description                                      |
-|---------------|--------------------------------------------------|
-| 400           | Bad Request  |
-| 401           | Unauthorized  |
-| 503           | Service Unavailable |
+| Status Code             | Description                                       |
+|-------------------------|---------------------------------------------------|
+| 404 Not Found           | The server could not find the requested resource. |
+| 500 Service Unavailable | The server could not complete the request.        |
+| ECONNREFUSED            | The service is unavailable.                      |
 
 ## Related Topics
 

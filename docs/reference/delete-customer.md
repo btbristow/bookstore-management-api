@@ -2,17 +2,17 @@
 layout: page
 ---
 
-# DELETE orders
+# DELETE customers
 
-Use `DELETE` with the `orders` endpoint to remove orders from a store's order management system. This method is used for order cancellation features.
+Use `DELETE` with the `customers` endpoint to remove customers from a store database. When you delete customers, you must also [delete their orders](delete-orders.md) in a separate API request.
 
 ## Request
 
-To `DELETE` an order using curl, enter `curl -X DELETE http://{server_url}:{port}/orders/{id}` with your own `{server_url}` and `{port}` and a valid order `id`.
+To `DELETE` a customer using curl, enter `curl -X DELETE http://{server_url}:{port}/customer/{id}` with your own `{server_url}` and `{port}` and a valid customer `id`.
 
 ## Response
 
-The following sections list the success and error responses that the `DELETE orders` method supports.
+The following sections list the success and error responses that the `DELETE customers` method supports.
 
 ### Success response
 
@@ -30,6 +30,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-* [orders endpoint](orders.md)
-* [POST orders](post-orders.md)
-* [PATCH orders](patch-orders.md)
+* [customers endpoint](customers.md)
+* [POST customers](post-customers.md)
+* [PATCH customers](patch-customers.md)

@@ -3,11 +3,11 @@ layout: page
 ---
 # POST customers
 
-Use `POST` with the `customers` endpoint to create new customers for a store. You can add one or more customers to the request body. You must create customers to create orders.
+Use `POST` with the `customers` endpoint to create new customers for a store. You can add multiple customers to a request body. You must create customers before you create orders.
 
 ## Request
 
-To create a customer with the `POST customers` method, use the following cURL request.
+To `POST` a new customer using curl, enter the following request with your own `{server_url}` and `{port}` values:
 
 ```bash
 curl -X POST '{server_url}:{port}/customers' \
@@ -22,29 +22,21 @@ curl -X POST '{server_url}:{port}/customers' \
 
 ## Response
 
-The following sections contain an example success response, along with error response codes.
+The following sections list the success and error responses that the `POST customers` method supports.
 
 ### Success response
 
-When your `POST` request is successful, the Bookstore Management API returns a `201 Created`, along with the following response body.
+A successful `POST` returns `201 Created` along with the complete customer object, including a new `id` property (for example, `"id": "4g540"`).
 
-```json
-{
-    "status": "PASS",
-    "message": "Customer created",
-    "customer_id": 2
-}
-```
+### Error response
 
-### Error responses
+An error response contains one of the following HTTP response status codes.
 
-When your `POST` request is unsuccessful, the Bookstore Management API returns one of the following response codes.
-
-| Response Code | Description                                      |
-|---------------|--------------------------------------------------|
-| 400           | Bad Request  |
-| 401           | Unauthorized  |
-| 503           | Service Unavailable |
+| Status Code             | Description                                       |
+|-------------------------|---------------------------------------------------|
+| 404 Not Found           | The server could not find the requested resource. |
+| 500 Service Unavailable | The server could not complete the request.        |
+| ECONNREFUSED            | The service is unavailable.                      |
 
 ## Related Topics
 
