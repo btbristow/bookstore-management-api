@@ -1,19 +1,20 @@
 ---
 layout: page
 ---
+
 # POST books
 
-Use `POST` with the `books` endpoint to create new books in the store inventory. You can add one or more books to the request body.
+Use `POST` with the `books` endpoint to create new books in a store inventory. You can add multiple books to a request body.
 
 > **Note**
-> Use the `POST` method to add new books that the store has not previously carried. To update the number of *existing* books, use [PATCH books](patch-books.md) with the `in_stock` property instead.
+> To update the number of copies of _existing_ books, use [PATCH books](patch-books.md) with the `in_stock` property instead.
 
 ## Request
 
-To create a book with the `POST books` method, use the following cURL request.
+To `POST` a new book via curl, use the following request with your own `{server_url}` and `{port}` values:
 
 ```bash
-curl -X POST '{server_url}:{port}/customers' \
+curl -X POST '{server_url}:{port}/books' \
 --header 'Content-Type: application/json' \
 --data '{
     "title": "The Power Broker: Robert Moses and the Fall of New York",
@@ -25,35 +26,26 @@ curl -X POST '{server_url}:{port}/customers' \
     "genre": "non-fiction",
     "format": "paperback",
     "in_stock": 1,
-    "book_id": 4
 }'
 ```
 
 ## Response
 
-The following sections contain an example success response, along with error response codes.
+The following sections list the success and error responses that the `POST books` method supports.
 
 ### Success response
 
-When your `POST` request is successful, the Bookstore Management API returns a `201 Created`, along with the following response body.
+A successful `POST` returns `201 Created` along with the complete book object, including a new `id` property (for example, `"id": "3f50"`).
 
-```json
-{
-    "status": "PASS",
-    "message": "Book created",
-    "book_id": 2
-}
-```
+### Error response
 
-### Error responses
+An error response contains one of the following HTTP response status codes.
 
-When your `POST` request is unsuccessful, the Bookstore Management API returns one of the following response codes.
-
-| Response Code | Description                                      |
-|---------------|--------------------------------------------------|
-| 400           | Bad Request  |
-| 401           | Unauthorized  |
-| 503           | Service Unavailable |
+| Status Code             | Description                                       |
+|-------------------------|---------------------------------------------------|
+| 404 Not Found           | The server could not find the requested resource. |
+| 500 Service Unavailable | The server could not complete the request.        |
+| ECONNREFUSED            | The service is unavailable.                      |
 
 ## Related Topics
 

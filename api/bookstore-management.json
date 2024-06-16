@@ -130,6 +130,15 @@
           "book_id": [
               1
           ]
+      },
+      {
+          "order_id": 2,
+          "order_date": "2024-04-19",
+          "number_of_items": 1,
+          "customer_id": 4,
+          "book_id": [
+              1
+          ]
       }
   ]
 }

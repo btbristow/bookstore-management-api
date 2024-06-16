@@ -13,7 +13,7 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 ## Send the request
 
-You can get a store's inventory with one API request.
+You can get a store's inventory with a single API request.
 
 * To get a store's inventory, on the command line, type `curl -X GET {server_url}:{port}/books`.
 
@@ -41,8 +41,12 @@ You can get a store's inventory with one API request.
 
 You may encounter the following errors:
 
-* **404 Not Found** — Unable to find the requested resources. Check your API request for typos.
-* **ECONNREFUSED** — Service offline. To resolve this issue, restart JSON Server.
+The following table lists errors you may encounter, along with suggested resolutions.
+
+| Status code             | Fix by...                                       |
+|-------------------------|---------------------------------------------------|
+| 404 Not Found           | Check your API request for typos. |
+| ECONNREFUSED            | Restart JSON Server.                      |
 
 ## Related topics
 
