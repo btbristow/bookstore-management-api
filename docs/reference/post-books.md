@@ -4,7 +4,7 @@ layout: page
 
 # POST books
 
-Use `POST` with the `books` endpoint to create new books in a store inventory. You can add multiple books to a request body.
+Use `POST` with the `books` endpoint to create new books in the store inventory. You can add multiple books in one request body.
 
 > **Note**
 > To update the number of copies of _existing_ books, use [PATCH books](patch-books.md) with the `in_stock` property instead.
@@ -39,7 +39,7 @@ A successful `POST` returns `201 Created` along with the complete book object, i
 
 ### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|

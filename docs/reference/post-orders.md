@@ -3,11 +3,11 @@ layout: page
 ---
 # POST orders
 
-Use `POST` with the `orders` endpoint to create new orders. You can add multiple orders to a request body. Orders must contain at least one `book_id` and `customer_id` as described in [Create an order](../tutorials/create-an-order.md)
+Use `POST` with the `orders` endpoint to create new orders. You can add multiple orders to a request body. Orders must contain at least one `book_id` and `customer_id`, as described in [Create an order](../tutorials/create-an-order.md)
 
 ## Request
 
-To `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}` values, as well as valid `book_id` and `customer_id` properties:
+To `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, as well one or more `book_id` properties and a `customer_id` property:
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \
@@ -40,5 +40,7 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-- [Orders endpoint](orders.md)
-- [PATCH orders](patch-orders.md)
+* [Orders](reference/orders.md)
+* [GET orders by customer](reference/get-orders.md)
+* [PATCH orders](reference/patch-orders.md)
+* [DELETE orders](reference/delete-orders.md)

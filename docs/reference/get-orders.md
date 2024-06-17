@@ -4,7 +4,7 @@ layout: page
 
 # GET orders by customer
 
-You can make a `GET` reqest to the `/orders` endpoint and use query parameters to list all orders made by a customer.
+You can make a `GET` reqest to the `/orders` endpoint and use query parameters to list all orders made by a customer. Use the same method to get any other supported property in the Bookstore Management API.
 
 ## Request
 
@@ -12,14 +12,14 @@ To `GET` orders by customer using curl, enter `curl -X GET http://{server_url}:{
 
 ## Response
 
-The following sections list the success and error responses that this method supports. 
+The following sections list supported success and error responses.
 
 ### Success response
 
-A successful `GET` request for orders by customer returns a `200 OK` along with all orders for that customer in the response body.
+A successful `GET` request for orders by customer returns a `200 OK` along with a JSON array that contains the order(s).
 
 > **Note:**
-> If you send incorrect query parameters (such as the wrong property), you receive a `200 OK` with an empty array `[]`. When this happens, confirm the properties and syntax in your request.
+> If you send incorrect query parameters (such as the wrong property name), you receive a `200 OK` with an empty array `[]`. When this happens, confirm the properties and syntax in your request.
 
 ### Error response
 

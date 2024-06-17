@@ -40,5 +40,7 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-- [orders endpoint](orders.md)
-- [POST orders](post-orders.md)
+* [Orders](reference/orders.md)
+* [GET orders by customer](reference/get-orders.md)
+* [POST orders](reference/post-orders.md)
+* [DELETE orders](reference/delete-orders.md)
