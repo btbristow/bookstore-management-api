@@ -11,9 +11,9 @@ To complete this tutorial, you must have command line access to curl and be able
 
 To learn how to run the API locally, see [Test with JSON Server](test-with-json-server.md).
 
-## Step 1: Get your book inventory
+## Step 1: Get the book inventory
 
-To add a book to an order, you must know its `id`. We will use `GET` with the `/books` endpoint to obtain a list of books and then choose a book.
+To add a book to an order, you must know its `id`. We will use `GET` with the `/books` endpoint to obtain a list of example books. Then, we will choose a book to use in this tutorial.
 
 1. To list the books in stock, on the command line, enter `curl -X GET {server_url}:{port}/books`.
 
