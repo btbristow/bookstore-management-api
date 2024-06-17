@@ -1,13 +1,13 @@
 ---
 layout: page
 ---
-# Books endpoint
+# Books
 
-Use the `books` endpoint when building UI components that enable users to manage their store inventories. For example, build a feature that gets a list of books in stock. Or, add a form where users add new books from a delivery.
+Use the `books` endpoint when building UI components for store inventory management. For example, build a feature that gets a [list of books](../tutorials/get-store-inventory.md) in stock. Or, add a form where users add new books received in a delivery.
 
 ## Request
 
-To call the `books` endpoint with cURL, use `curl -X GET {server_url}{port}/books`.
+To call the `books` endpoint with curl, use `curl -X GET {server_url}{port}/books`.
 
 ## Response
 
@@ -17,6 +17,7 @@ The following sections contain an example response with a complete book object. 
 
 ```json
     {
+      "id": "7dcd",
       "title": "The Mysteries of Pittsburgh",
       "author_last_name": "Chabon",
       "author_first_name": "Michael",
@@ -26,7 +27,6 @@ The following sections contain an example response with a complete book object. 
       "genre": "fiction",
       "format": "hardcover",
       "in_stock": 1,
-      "book_id": 1
     }
 ```
 
@@ -34,6 +34,7 @@ The following sections contain an example response with a complete book object. 
 
 | **Property**        | **Type** | **Description**                                                                                 |
 |---------------------|----------|-------------------------------------------------------------------------------------------------|
+| `id`                | string   | Indicates the book's unique identifier.                                                         |
 | `title`             | string   | Indicates the book title, which can differ by `ISBN-10` for the same book.                                        |
 | `author_last_name`  | string   | Indicates the author's last name.                                                               |
 | `author_first_name` | string   | Indicates the author's first name.                                                              |
@@ -43,19 +44,10 @@ The following sections contain an example response with a complete book object. 
 | `genre`             | string   | Indicates the book genre, for example, **nonfiction**.                                           |
 | `format`            | string   | Indicates the book format as **paperback** or **hardcover**.                                    |
 | `in_stock`          | number   | Lists the number of copies of the book in stock.                                                |
-| `book_id`                | number   | Indicates the book's unique identifier.                                                         |
 
 ## Methods
 
 The `books` endpoint supports the following methods:
 
-- [GET books](get-books.md)
-- [POST books](post-books.md)
-- [PATCH books](patch-books.md)
-
-## Related topics
-
-To learn more about managing store inventory with the 'books' endpoint, see the following tutorials.
-
-- [Get store inventory](../tutorials/get-store-inventory.md)
-- [Update store inventory](../tutorials/update-store-inventory.md)
+* [POST books](post-books.md)
+* [PATCH books](patch-books.md)

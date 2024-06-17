@@ -3,11 +3,11 @@ layout: page
 ---
 # PATCH customers
 
-Use `PATCH` with the `customers` endpoint to update customer information (for example, if a customer changes their email address).
+Use `PATCH` with the `customers` endpoint to update customer information. For example, you might use this method to update a customer email address.
 
 ## Request
 
-To update customer information with `PATCH`, use the following curl request with your own `{server_url}` and `{port}` values:
+To update customer information with `PATCH`, use the following curl request with your own `{server_url}` and `{port}`:
 
 ```bash
 curl -X PATCH \
@@ -26,9 +26,7 @@ A successful `PATCH` returns `200 OK` along with the complete customer object. T
 
 ### Error responses
 
-An error response contains one of the following HTTP response status codes.
-
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -38,5 +36,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-- [customers endpoint](customers.md)
-- [POST customers](post-customers.md)
+* [Customers endpoint](customers.md)
+* [POST customers](post-customers.md)
+* [DELETE customers](delete-customers.md)

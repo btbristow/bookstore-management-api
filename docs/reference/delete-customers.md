@@ -4,7 +4,7 @@ layout: page
 
 # DELETE customers
 
-Use `DELETE` with the `customers` endpoint to remove customers from a store database. When you delete customers, you must also [delete their orders](delete-orders.md) in a separate API request.
+Use `DELETE` with the `customers` endpoint to remove customers from a store database. When you delete customers, you must also [delete their orders](delete-orders.md).
 
 ## Request
 
@@ -20,7 +20,7 @@ A successful `DELETE` returns `200 OK` along with the complete order object that
 
 ### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -30,6 +30,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-* [customers endpoint](customers.md)
+* [Customers endpoint](customers.md)
 * [POST customers](post-customers.md)
 * [PATCH customers](patch-customers.md)

@@ -3,11 +3,11 @@ layout: page
 ---
 # POST customers
 
-Use `POST` with the `customers` endpoint to create new customers for a store. You can add multiple customers to a request body. You must create customers before you create orders.
+Use `POST` with the `customers` endpoint to create new customers in the store database. You can add multiple customers in one request body. You must create customers before you create orders.
 
 ## Request
 
-To `POST` a new customer using curl, enter the following request with your own `{server_url}` and `{port}` values:
+To `POST` a new customer using curl, enter the following request with your own `{server_url}` and `{port}`:
 
 ```bash
 curl -X POST '{server_url}:{port}/customers' \
@@ -30,7 +30,7 @@ A successful `POST` returns `201 Created` along with the complete customer objec
 
 ### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -40,5 +40,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-- [Customers endpoint](customers.md)
-- [PATCH customers](patch-customers.md)
+* [Customers endpoint](customers.md)
+* [PATCH customers](patch-customers.md)
+* [DELETE customers](delete-customers.md)

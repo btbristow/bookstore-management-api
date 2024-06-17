@@ -4,7 +4,7 @@ layout: page
 
 # DELETE orders
 
-Use `DELETE` with the `orders` endpoint to remove orders from a store's order management system. This method is used for order cancellation features.
+Use `DELETE` with the `orders` endpoint to remove orders from a store's order management system (for example, to cancel an order).
 
 ## Request
 
@@ -20,7 +20,7 @@ A successful `DELETE` returns `200 OK` along with the complete order object that
 
 ### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -30,6 +30,7 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-* [orders endpoint](orders.md)
-* [POST orders](post-orders.md)
-* [PATCH orders](patch-orders.md)
+* [Orders](reference/orders.md)
+* [GET orders by customer](reference/get-orders.md)
+* [POST orders](reference/post-orders.md)
+* [PATCH orders](reference/patch-orders.md)

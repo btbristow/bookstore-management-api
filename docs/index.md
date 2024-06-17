@@ -16,20 +16,20 @@ The Bookstore Management API has three endpoints.
 
 ### Books endpoint
 
-* [Books endpoint](reference/books.md)
+* [Books](reference/books.md)
   * [POST books](reference/post-books.md)
   * [PATCH books](reference/patch-books.md)
 
 ### Customers endpoint
 
-* [Customers endpoint](reference/customers.md)
+* [Customers](reference/customers.md)
   * [POST customers](reference/post-customers.md)
   * [PATCH customers](reference/patch-customers.md)
-  * [DELETE customers](reference/delete-customers.md)
+  * [DELETE customers](delete-customers.md)
 
 ### Orders endpoint
 
-* [Orders endpoint](reference/orders.md)
+* [Orders](reference/orders.md)
   * [GET orders by customer](reference/get-orders.md)
   * [POST orders](reference/post-orders.md)
   * [PATCH orders](reference/patch-orders.md)

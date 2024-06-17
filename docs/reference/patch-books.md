@@ -3,14 +3,14 @@ layout: page
 ---
 # PATCH books
 
-Use `PATCH` with the `books` endpoint to update book information. You will use this method most commonly to change the number of books in stock via the `in_stock` property.
+Use `PATCH` with the `books` endpoint to update book information. You will use this method most commonly to change the number of books in stock.
 
 > **Note**
 > To add books that a store has not previously carried, use [POST books](post-books.md) instead.
 
 ## Request
 
-To update a book with `PATCH`, use the following curl request. Supply your own `{server_url}` and `{port}` values, along with a valid book `id`:
+To update a book with `PATCH`, use the following curl request. Supply your own `{server_url}` and `{port}`, along with a valid book `id`:
 
 ```bash
 curl -X PATCH \
@@ -25,13 +25,11 @@ The following sections list the success and error responses that the `PATCH book
 
 ### Success response
 
-A successful `PATCH` returns `200 OK` along with the complete book object. This includes updated properties.
+A successful `PATCH` returns `200 OK` along with the complete book object. This includes updated property values.
 
 ### Error responses
 
-An error response contains one of the following HTTP response status codes.
-
-An error response contains one of the following HTTP response status codes.
+An error response contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
