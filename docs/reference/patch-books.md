@@ -5,7 +5,7 @@ layout: page
 
 Use `PATCH` with the `books` endpoint to update book information. You will use this method most commonly to change the number of books in stock.
 
-> **Note**
+> **Note:**
 > To add books that a store has not previously carried, use [POST books](post-books.md) instead.
 
 ## Request
