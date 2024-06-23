@@ -115,3 +115,4 @@ Now that you know how to manage customers and orders, proceed with your integrat
 
 * [Update a store](update-store.md)
 * [Get store inventory](get-store-inventory.md)
+* [Get orders by customer or date](tutorials/orders-customer-date.md)

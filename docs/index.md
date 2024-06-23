@@ -24,7 +24,7 @@ The following tutorials outline common bookseller use cases. Refer to them when 
 
 * [Create an order](tutorials/create-an-order.md) — Get a book title, add a customer, and create a new order.
 * [Update a store](tutorials/update-store.md) — Update the books in stock, customer contact information, and order details.
-* [Use query parameters](tutorials/custom-order-queries.md) — With query parameters, view orders by customer `id` or order date.
+* [Get orders by customer or date](tutorials/orders-customer-date.md) — With query parameters, get orders by customer or order date.
 
 ## Reference
 

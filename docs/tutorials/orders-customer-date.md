@@ -1,9 +1,9 @@
 ---
 layout: page
 ---
-# Use query parameters
+# Get orders by customer or date
 
-This tutorial takes about 15 minutes to complete and explains how to use query parameters with the `orders` endpoint to get order information.
+This tutorial takes about 15 minutes to complete and explains how to use query parameters with the `orders` endpoint to get orders by customer or order date.
 
 You can use query parameters with any endpoint in the Bookstore Management API.
 

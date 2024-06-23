@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-# Create an order
+# Update a store
 
 This tutorial takes about 15 minutes to complete and presents a workflow where you add books from a delivery, update customer information, and edit an order.
 
@@ -24,6 +24,7 @@ curl -X PATCH '{server_url}:{port}/books/988c' \
 ```
 
 The Bookstore Management API returns a `200 OK` with a response body that contains the updated book—in this case, Oryx and Crake by Margaret Atwood:
+
 ```json
 {
   "id": "988c",
@@ -107,6 +108,6 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 
 ## Related topics
 
-* [Update a store](update-store.md)
 * [Get store inventory](get-store-inventory.md)
-* [Use Query Parameters](custom-order-queries.md)
+* [Create an order](tutorials/create-an-order.md)
+* [Get orders by customer or date](tutorials/orders-customer-date.md)

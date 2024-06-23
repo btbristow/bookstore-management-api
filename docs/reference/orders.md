@@ -47,7 +47,6 @@ The following sections contain an example response with a complete orders object
 
 The `orders` endpoint supports the following methods:
 
-* [GET orders by customer](reference/get-orders.md)
 * [POST orders](reference/post-orders.md)
 * [PATCH orders](reference/patch-orders.md)
 * [DELETE orders](reference/delete-orders.md)

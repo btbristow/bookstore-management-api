@@ -51,5 +51,6 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-- [Books endpoint](books.md)
-- [PATCH books](patch-books.md)
+* [Books](books.md)
+* [PATCH books](patch-books.md)
+* [DELETE books](reference/delete-books.md)

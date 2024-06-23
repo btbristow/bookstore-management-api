@@ -53,3 +53,4 @@ json-server -p 3001 bookstore-management.json
 
 * [Get store inventory](get-store-inventory.md)
 * [Create an order](create-an-order.md)
+* [Get orders by customer or date](tutorials/orders-customer-date.md)

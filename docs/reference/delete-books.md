@@ -30,6 +30,6 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-* [books](reference/books.md)
+* [Books](reference/books.md)
 * [POST books](reference/post-books.md)
 * [PATCH books](reference/patch-books.md)

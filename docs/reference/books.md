@@ -55,3 +55,4 @@ The `books` endpoint supports the following methods:
 
 * [POST books](post-books.md)
 * [PATCH books](patch-books.md)
+* [DELETE books](reference/delete-books.md)
