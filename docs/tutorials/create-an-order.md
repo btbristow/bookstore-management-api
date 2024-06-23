@@ -15,7 +15,7 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 To add a book to an order, you must know its `id`. We will use `GET` with the `/books` endpoint to obtain a list of example books. Then, we will choose a book to use in this tutorial.
 
-1. To list the books in stock, enter `curl -X GET {server_url}:{port}/books`
+1. To list the books in stock, enter `curl -X GET {server_url}:{port}/books`, using your own `{server_url}` and `{port}`:
 
     > **Tip:**
     > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.

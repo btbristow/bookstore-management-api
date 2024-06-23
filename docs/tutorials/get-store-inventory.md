@@ -15,7 +15,7 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 You can get a store's inventory with a single API request.
 
-* To get a store's inventory, on the command line, enter `curl -X GET {server_url}:{port}/books`.
+* To get a store's inventory, enter `curl -X GET {server_url}:{port}/books`.
 
     > **Tip:**
     > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.
@@ -38,6 +38,8 @@ You can get a store's inventory with a single API request.
       "in_stock": 2
     }
     ```
+
+> **Note:** Out of stock books appear in this request with `"in_stock": 0`. To delete books that a store has ceased to carry, see [DELETE books](delete-books.md).
 
 ## Troubleshoot errors
 
