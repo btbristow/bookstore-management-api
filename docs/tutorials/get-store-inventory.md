@@ -52,6 +52,6 @@ The following table lists errors you may encounter, along with suggested resolut
 
 ## Related topics
 
-* [Books endpoint](../reference/books.md)
-* [POST books](../reference/post-books.md)
-* [Create an order](create-an-order.md)
+* [Create an order](tutorials/create-an-order.md)
+* [Update a store](tutorials/update-store.md)
+* [Get orders by customer or date](tutorials/orders-customer-date.md)

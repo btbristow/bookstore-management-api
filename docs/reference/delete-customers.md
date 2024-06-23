@@ -30,6 +30,6 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-* [Customers endpoint](customers.md)
+* [Customers](customers.md)
 * [POST customers](post-customers.md)
 * [PATCH customers](patch-customers.md)

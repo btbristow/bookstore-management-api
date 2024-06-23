@@ -39,5 +39,6 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-- [Books endpoint](books.md)
-- [POST books](post-books.md)
+* [Books](books.md)
+* [POST books](post-books.md)
+* [DELETE books](reference/delete-books.md)

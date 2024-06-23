@@ -31,6 +31,5 @@ An error response contains one of the following HTTP status codes.
 ## Related Topics
 
 * [Orders](reference/orders.md)
-* [GET orders by customer](reference/get-orders.md)
 * [POST orders](reference/post-orders.md)
 * [PATCH orders](reference/patch-orders.md)

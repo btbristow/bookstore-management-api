@@ -32,7 +32,7 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-* [orders endpoint](orders.md)
+* [Orders](orders.md)
 * [POST orders](post-orders.md)
 * [PATCH orders](patch-orders.md)
 * [DELETE orders](delete-orders.md)
