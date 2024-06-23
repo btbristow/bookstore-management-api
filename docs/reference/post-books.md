@@ -4,7 +4,7 @@ layout: page
 
 # POST books
 
-Use `POST` with the `books` endpoint to create new books in the store inventory. You can add multiple books in one request body.
+Use `POST` with the `books` endpoint to create new books in the store inventory. When testing with JSON Server, you must add one book at a time.
 
 > **Note**
 > To update the number of copies of _existing_ books, use [PATCH books](patch-books.md) with the `in_stock` property instead.

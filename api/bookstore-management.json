@@ -69,6 +69,34 @@
       "condition": "used",
       "price": "9.99",
       "in_stock": 2
+    },
+    {
+      "id": "099c",
+      "title": "American Gods",
+      "author_last_name": "Gaiman",
+      "author_first_name": "Neil",
+      "publisher": "Harper Collins",
+      "year_published": 2002,
+      "ISBN-10": 9780380789030,
+      "genre": "fiction",
+      "format": "paperback",
+      "condition": "new",
+      "price": "15.99",
+      "in_stock": 5
+    },
+    {
+      "id": "988c",
+      "title": "Oryx and Crake",
+      "author_last_name": "Atwood",
+      "author_first_name": "Margaret",
+      "publisher": "Knopf Canada",
+      "year_published": 2010,
+      "ISBN-10": 9780307400840,
+      "genre": "fiction",
+      "format": "hardcover",
+      "condition": "new",
+      "price": "19.99",
+      "in_stock": 5
     }
   ],
   "customers": [

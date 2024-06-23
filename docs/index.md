@@ -3,12 +3,12 @@ layout: page
 ---
 # Bookstore Management API
 
-The Bookstore Management API is the back end for your custom bookstore application. Connect your interface to a REST API designed for bookseller workflows. Customize your integration for any store: new or used, specialty or general, online or off.
+The Bookstore Management API connects to your custom bookstore application's back end and is designed for bookseller workflows. Use it to customize your application for any store: new or used, specialty or general, online or off.
 
-The Bookstore Management API supports the following features in your application:
+The Bookstore Management API has the following features:
 
-* Comprehensive inventory management based on the ISBN-10 standard.
-* CRUD operation support for your inventory and order management databases.
+* Comprehensive book inventory management based on the ISBN-10 standard.
+* CRUD operation support for your inventory and order databases.
 * Integration with your point-of-sale systems.
 
 ## Get Started
@@ -20,11 +20,11 @@ This documentation contains everything you need to test and implement the Bookst
 
 ## Tutorials
 
-These tutorials outline common bookseller use cases. Use them to design a user-centric application for any bookstore:
+The following tutorials outline common bookseller use cases. Refer to them when designing a user-centric application for any store:
 
-* [Create an order](tutorials/create-an-order.md) — Add a customer and create a new order.
-* [Update a store](tutorials/update-store.md) — Update common store items, including the books in stock, customer contact information, and order details. *Coming soon*
-* [Build custom order queries](tutorials/custom-order-queries.md) — Use query parameters to view orders by customer email, or phone number.  *Coming soon*
+* [Create an order](tutorials/create-an-order.md) — Get a book title, add a customer, and create a new order.
+* [Update a store](tutorials/update-store.md) — Update the books in stock, customer contact information, and order details.
+* [Use query parameters](tutorials/custom-order-queries.md) — With query parameters, view orders by customer `id` or order date.
 
 ## Reference
 
@@ -36,6 +36,7 @@ The **[Books endpoint](reference/books.md)** connects your user interface to you
 
 * [POST books](reference/post-books.md)
 * [PATCH books](reference/patch-books.md)
+* [DELETE books](reference/delete-books.md)
 
 ### Customers endpoint
 

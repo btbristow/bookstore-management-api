@@ -3,7 +3,7 @@ layout: page
 ---
 # PATCH books
 
-Use `PATCH` with the `books` endpoint to update book information. You will use this method most commonly to change the number of books in stock.
+Use `PATCH` with the `books` endpoint to change book information. You will use this method most commonly to update the number of books in stock.
 
 > **Note:**
 > To add books that a store has not previously carried, use [POST books](post-books.md) instead.
@@ -25,7 +25,7 @@ The following sections list the success and error responses that the `PATCH book
 
 ### Success response
 
-A successful `PATCH` returns `200 OK` along with the complete book object. This includes updated property values.
+A successful `PATCH` returns `200 OK` along with the updated book object.
 
 ### Error responses
 
