@@ -1,0 +1,17 @@
+build:
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      working-directory: docs
+
+- name: Upload artifact
+    uses: actions/upload-pages-artifact@v1
+    with:
+      path: "docs/_site/"
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "docs/**"
