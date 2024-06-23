@@ -3,7 +3,7 @@ layout: page
 ---
 # Get store inventory
 
-This tutorial takes about ten minutes to complete and explains how to `GET` a store inventory from the `/books` endpoint. It also contains an example response and provides next steps for troubleshooting errors.
+This tutorial takes about ten minutes to complete and explains how to `GET` a store's inventory from the `/books` endpoint. It also contains an example response and provides next steps for troubleshooting errors.
 
 ## Prerequisites
 
@@ -15,31 +15,31 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 You can get a store's inventory with a single API request.
 
-* To get a store's inventory, on the command line, type `curl -X GET {server_url}:{port}/books`.
+* To get a store's inventory, on the command line, enter `curl -X GET {server_url}:{port}/books`.
 
     > **Tip:**
-    > For example, if using json-server, you might type `curl -X GET localhost:3000/books`.
+    > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.
 
     The Bookstore Management API returns a `200 OK` along with a JSON response body in the following format.
 
     ```json
     {
-        "title": "Mastering the Art of French Cooking, Vol. 1",
-        "author_last_name": "Child",
-        "author_first_name": "Julia",
-        "publisher": "Knopf Doubleday Publishing Group",
-        "year_published": 2011,
-        "ISBN-10": 9780307958174,
-        "genre": "cookbooks",
-        "format": "hardcover",
-        "in_stock": 1,
-        "id": 5,
+      "id": "5rzn",
+      "title": "Mastering the Art of French Cooking, Vol. 1",
+      "author_last_name": "Child",
+      "author_first_name": "Julia",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 2011,
+      "ISBN-10": 9780307958174,
+      "genre": "cookbooks",
+      "format": "hardcover",
+      "condition": "used",
+      "price": "9.99",
+      "in_stock": 2
     }
     ```
 
 ## Troubleshoot errors
-
-You may encounter the following errors:
 
 The following table lists errors you may encounter, along with suggested resolutions.
 

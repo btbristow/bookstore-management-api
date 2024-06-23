@@ -3,15 +3,15 @@ layout: page
 ---
 # Test with JSON Server
 
-This tutorial takes about 20 minutes to complete and explains how to test the Bookstore Management API on your local machine.
+This tutorial takes about 20 minutes to complete and explains how to test the Bookstore Management API on your local computer.
 
-To do this, you will use [JSON Server](https://www.npmjs.com/package/json-server), which simulates a REST API service by using a local JSON file as the database.
+You will use [JSON Server](https://www.npmjs.com/package/json-server), which simulates a REST API by substituting the database in your environment with a local JSON file.
 
 ## Prerequisites
 
 To complete this tutorial, you need the following:
 
-* A Windows, Mac, or Linux development environment.
+* A Windows, Mac, or Linux computer.
 * Access to [curl](https://curl.se/download.html) on the command line.
 * A current or long-term support (LTS) version of [Node.js](https://nodejs.org/en/download/package-manager).
 
@@ -26,7 +26,7 @@ To install and run JSON Server:
 
 1. On the command line, to install JSON Server, type `npm i json-server`.
 
-1. On GitHub, use Git to clone the [Bookstore Management API repository](https://github.com/btbristow/bookstore-management-api). Or, download the repository to your computer.
+1. On GitHub, use Git to clone the [Bookstore Management API repository](https://github.com/btbristow/bookstore-management-api). Or, simply download the repository.
 
 1. On the command line, browse to `/path/to/bookstore-management-api-main/api`.
 
@@ -34,15 +34,15 @@ To install and run JSON Server:
 
     a. **Windows** — Type `bookstore-management.bat`.
 
-    b. **macOS or Linux** — To make the script executable, type `chmod +x bookstore-management.sh`. Then, type `./bookstore-management.sh`.
+    b. **macOS or Linux** — Make the script to run executable by entering `chmod +x bookstore-management.sh`. Then, enter `./bookstore-management.sh`.
 
-    JSON Server starts and listens for API requests.
+    JSON Server starts in your terminal emulator and listens for API requests. Open a new terminal window to send them.
 
 ## Troubleshooting
 
 If JSON Server fails to run, confirm that port 3000 is available on your network.
 
-To change the port that JSON Server runs on, add `-p {port}` to the script file. For example, in `start-server.sh`, use the following:
+To change the port, add `-p {port}` to the script file. For example, in `start-server.sh`:
 
 ```bash
 #!/bin/bash

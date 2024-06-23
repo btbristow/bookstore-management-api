@@ -3,11 +3,11 @@ layout: page
 ---
 # Orders
 
-Use the `orders` endpoint to build order management features. The `orders` endpoint is the only endpoint in the Bookstore Management API with information about the other endpoints, so it is designed for custom requests. For example, you might request a list of books ordered by a specific customer, as described in [GET orders by customer](get-orders.md)
+Use the `orders` endpoint to build order management features. The `orders` endpoint contains information about the other endpoints and is designed for custom requests. For example, get a list of books ordered by a certain customer, as described in [GET orders by customer](get-orders.md)
 
 ## Request
 
-To call the `orders` endpoint with curl, use `curl -X GET {server_url}/orders`.
+To call the `orders` endpoint using curl, enter `curl -X GET {server_url}/orders`.
 
 ## Response
 
@@ -17,11 +17,16 @@ The following sections contain an example response with a complete orders object
 
 ```json
     {
-      "id": "8hgf",
-      "order_date": "2023-12-20",
-      "items": 2,
-      "customer_id": "3mys", 
-      "book_id": ["8kdt", "5mdz"]
+      "id": "9fmo",
+      "order_date": "2024-02-22",
+      "items": 1,
+      "customer_id": "2ogb",
+      "book_id": [
+        "7dpc"
+      ],
+      "subtotal": "7.99",
+      "tax": "0.71",
+      "total": "8.70"
     }
 ```
 
@@ -34,6 +39,9 @@ The following sections contain an example response with a complete orders object
 | `items`       | number   | Indicates the number of books ordered.                              |
 | `customer_id` | string   | Indicates the customer's unique identifier. |
 | `book_id`     | array    | In an array of strings, indicates the unique identifier(s) for the book(s) purchased.                                    |
+| `subtotal` | string   | Indicates the order subtotal in USD using dollars and cents, for example *8.70* or *25.02*. |
+| `tax` | string   | Indicates the sales tax in USD. The Bookstore Management API's test version applies 2024 [New York State sales tax](https://www.nyc.gov/site/finance/business/business-nys-sales-tax.page) of 8.875%, but you can pass in any percentage, calculated against the order `subtotal` property.   |
+| `subtotal` | string   | Indicates the order total in USD. |
 
 ## Methods
 

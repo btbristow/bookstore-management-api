@@ -4,7 +4,7 @@ layout: page
 
 # GET orders by customer
 
-You can make a `GET` reqest to the `/orders` endpoint and use query parameters to list all orders made by a customer. Use the same method to get any other supported property in the Bookstore Management API.
+You can make a `GET` reqest to the `/orders` endpoint that applies query parameters to list all orders from one customer. Use the same method to get any supported property in the Bookstore Management API.
 
 ## Request
 
@@ -16,7 +16,7 @@ The following sections list supported success and error responses.
 
 ### Success response
 
-A successful `GET` request for orders by customer returns a `200 OK` along with a JSON array that contains the order(s).
+A successful `GET` request for orders by customer returns a `200 OK` along with a JSON array that contains the orders, as shown in [Orders](orders.md#response).
 
 > **Note:**
 > If you send incorrect query parameters (such as the wrong property name), you receive a `200 OK` with an empty array `[]`. When this happens, confirm the properties and syntax in your request.

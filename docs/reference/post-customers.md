@@ -7,7 +7,7 @@ Use `POST` with the `customers` endpoint to create new customers in the store da
 
 ## Request
 
-To `POST` a new customer using curl, enter the following request with your own `{server_url}` and `{port}`:
+To add a new customer using curl, enter a `POST` request similar to the following, along with your own `{server_url}` and `{port}`:
 
 ```bash
 curl -X POST '{server_url}:{port}/customers' \
