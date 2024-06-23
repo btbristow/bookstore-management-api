@@ -8,7 +8,7 @@ Use `DELETE` with the `customers` endpoint to remove customers from a store data
 
 ## Request
 
-To `DELETE` a customer using curl, enter `curl -X DELETE http://{server_url}:{port}/customer/{id}` with your own `{server_url}` and `{port}` and a valid customer `id`.
+To `DELETE` a customer object using curl, enter `curl -X DELETE http://{server_url}:{port}/customer/{id}` with your own `{server_url}` and `{port}` and a valid customer `id`.
 
 ## Response
 

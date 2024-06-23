@@ -1,6 +1,7 @@
 {
   "books": [
     {
+      "id": "9hne",
       "title": "The Mysteries of Pittsburgh",
       "author_last_name": "Chabon",
       "author_first_name": "Michael",
@@ -9,10 +10,12 @@
       "ISBN-10": 9781453234099,
       "genre": "fiction",
       "format": "hardcover",
-      "in_stock": 1,
-      "book_id": 1
+      "condition": "new",
+      "price": "24.99",
+      "in_stock": 2
     },
     {
+      "id": "7dpc",
       "title": "Fight Club: A Novel",
       "author_last_name": "Palahniuk",
       "author_first_name": "Chuck",
@@ -21,10 +24,12 @@
       "ISBN-10": 9780393066395,
       "genre": "fiction",
       "format": "paperback",
-      "in_stock": 4,
-      "book_id": 2
+      "condition": "used",
+      "price": "7.99",
+      "in_stock": 3
     },
     {
+      "id": "8ajv",
       "title": "Infinite Jest",
       "author_last_name": "Wallace",
       "author_first_name": "David Foster",
@@ -32,11 +37,13 @@
       "year_published": 1996,
       "ISBN-10": 9780316073851,
       "genre": "fiction",
-      "format": "paperback",
-      "in_stock": 2,
-      "book_id": 3
+      "format": "hardcover",
+      "condition": "new",
+      "price": "24.99",
+      "in_stock": 2
     },
     {
+      "id": "9rdk",
       "title": "The Power Broker: Robert Moses and the Fall of New York",
       "author_last_name": "Caro",
       "author_first_name": "Robert A.",
@@ -45,10 +52,12 @@
       "ISBN-10": 9780394480763,
       "genre": "non-fiction",
       "format": "paperback",
-      "in_stock": 1,
-      "book_id": 4
+      "condition": "new",
+      "price": "14.99",
+      "in_stock": 1
     },
     {
+      "id": "5rzn",
       "title": "Mastering the Art of French Cooking, Vol. 1",
       "author_last_name": "Child",
       "author_first_name": "Julia",
@@ -57,100 +66,104 @@
       "ISBN-10": 9780307958174,
       "genre": "cookbooks",
       "format": "hardcover",
-      "in_stock": 1,
-      "book_id": 5
-    },
-    {
-      "id": "7dcd",
-      "title": "Random new book",
-      "author_last_name": "My",
-      "author_first_name": "Guy",
-      "publisher": "Little, Brown",
-      "year_published": 1996,
-      "ISBN-10": 9780301073851,
-      "genre": "fiction",
-      "format": "paperback",
-      "in_stock": 17
+      "condition": "used",
+      "price": "9.99",
+      "in_stock": 2
     }
   ],
   "customers": [
     {
+      "id": "3mys",
       "last_name": "Smith",
       "first_name": "Brian",
       "telephone": 2122371641,
-      "email": "brian.smith@fastmail.com",
-      "customer_id": 1
+      "email": "brian.smith@fastmail.com"
     },
     {
+      "id": "8azr",
       "last_name": "Jones",
       "first_name": "Jenny",
       "telephone": 7187451673,
-      "email": "jjones@proton.me",
-      "customer_id": 2
+      "email": "jjones@proton.me"
     },
     {
+      "id": "4nad",
       "last_name": "Rafferty",
       "first_name": "Terrence",
       "telephone": 9176636448,
-      "email": "raffterr@aol.com",
-      "customer_id": 3
+      "email": "raffterr@aol.com"
     },
     {
+      "id": "2ogb",
       "last_name": "Jameson",
       "first_name": "Michael",
       "telephone": 2018724543,
-      "email": "mjameson@gmail.com",
-      "customer_id": 4
+      "email": "mjameson@gmail.com"
     }
   ],
   "orders": [
     {
-      "order_id": 1,
+      "id": "8gnq",
       "order_date": "2023-06-02",
       "items": 3,
-      "customer_id": 2,
+      "customer_id": "8azr",
       "book_id": [
-        1,
-        2,
-        3
-      ]
+        "9hne",
+        "7dpc",
+        "8ajv"
+      ],
+      "subtotal": "57.97",
+      "tax": "5.14",
+      "total": "63.11"
     },
     {
-      "order_id": 2,
+      "id": "9fmo",
       "order_date": "2024-02-22",
-      "number_of_items": 1,
-      "customer_id": 3,
+      "items": 1,
+      "customer_id": "2ogb",
       "book_id": [
-        2
-      ]
+        "7dpc"
+      ],
+      "subtotal": "7.99",
+      "tax": "0.71",
+      "total": "8.70"
     },
     {
-      "order_id": 3,
+      "id": "8pij",
       "order_date": "2023-12-20",
       "items": 2,
-      "customer_id": 4,
+      "customer_id": "2ogb",
       "book_id": [
-        2,
-        4
-      ]
+        "7dpc",
+        "9rdk"
+      ],
+      "subtotal": "22.98",
+      "tax": "2.04",
+      "total": "25.02"
     },
     {
-      "order_id": 4,
+      "id": "7izt",
       "order_date": "2024-4-19",
       "items": 1,
-      "customer_id": 3,
+      "customer_id": "4nad",
       "book_id": [
-        1
-      ]
+        "9hne"
+      ],
+      "subtotal": "24.99",
+      "tax": "2.22",
+      "total": "27.21"
     },
     {
-      "order_id": 2,
+      "id": "8kdt",
       "order_date": "2024-04-19",
-      "number_of_items": 1,
-      "customer_id": 4,
+      "items": 1,
+      "customer_id": "4nad",
       "book_id": [
-        1
-      ]
+        "5rzn"
+      ],
+      "subtotal": "9.99",
+      "tax": "0.89",
+      "total": "10.88"
     }
   ]
 }

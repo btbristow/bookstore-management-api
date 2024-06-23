@@ -15,7 +15,7 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 To add a book to an order, you must know its `id`. We will use `GET` with the `/books` endpoint to obtain a list of example books. Then, we will choose a book to use in this tutorial.
 
-1. To list the books in stock, on the command line, enter `curl -X GET {server_url}:{port}/books`.
+1. To list the books in stock, enter `curl -X GET {server_url}:{port}/books`
 
     > **Tip:**
     > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.
@@ -24,26 +24,28 @@ To add a book to an order, you must know its `id`. We will use `GET` with the `/
 
     ```json
     {
-        "title": "Mastering the Art of French Cooking, Vol. 1",
-        "author_last_name": "Child",
-        "author_first_name": "Julia",
-        "publisher": "Knopf Doubleday Publishing Group",
-        "year_published": 2011,
-        "ISBN-10": 9780307958174,
-        "genre": "cookbooks",
-        "format": "hardcover",
-        "in_stock": 1,
-        "id": 5,
+      "id": "5rzn",
+      "title": "Mastering the Art of French Cooking, Vol. 1",
+      "author_last_name": "Child",
+      "author_first_name": "Julia",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 2011,
+      "ISBN-10": 9780307958174,
+      "genre": "cookbooks",
+      "format": "hardcover",
+      "condition": "used",
+      "price": "9.99",
+      "in_stock": 2
     }
     ```
 
-1. Choose any book `id` and note it for later in this tutorial.
+1. Choose any book `id` and note it for later use in this tutorial.
 
 ## Step 2: Create a customer
 
 When you create an order, you must specify a customer. We will use `POST` with the `/customers` endpoint to add a new customer who has not yet visited the store.
 
-1. To create a customer, on the command line, enter the following curl request:
+1. To create a customer, enter the following curl request:
 
     ```bash
     curl -X POST '{server_url}:{port}/customers' \
@@ -56,13 +58,15 @@ When you create an order, you must specify a customer. We will use `POST` with t
         }'
     ```
 
-    The Bookstore Management API returns a `201 Created`, along with a response body like the following:
+    The Bookstore Management API returns a `201 Created`, along with a response body similar to the following:
 
     ```json
     {
-        "status": "PASS",
-        "message": "Customer created",
-        "id": 4
+      "id": "2ogb",
+      "last_name": "Jameson",
+      "first_name": "Michael",
+      "telephone": 2018724543,
+      "email": "mjameson@gmail.com"
     }
     ```
 
@@ -70,14 +74,12 @@ When you create an order, you must specify a customer. We will use `POST` with t
 
 ## Step 3: Create an order
 
-Now that you know the book and the customer, `POST` a new order to the `/orders` endpoint.
+Now that you know the book and the customer, use `POST` with the `/orders` endpoint to create a new order.
 
 > **Tip:**  
-> In the following example, `book_id` is an array. To add multiple books to an order, you might use `[2, 5]`, where each number is a single book.
+> In the following example, `book_id` is an array. To add multiple books to an order, you might use `["9hne", "7dpc"]`, where each number is the `id` for one book.
 
-* To create a new order, on the command line, enter the following cURL request.
-
-    In the request, use the value of book `id` in `book_id` and the value of customer `id` in `customer_id`:
+* To create an order, enter the following curl request. Use the value of book `id` in `book_id` and the value of customer `id` in `customer_id`:
 
     ```bash
     curl -X POST '{server_url}:{port}/orders' \
@@ -85,18 +87,25 @@ Now that you know the book and the customer, `POST` a new order to the `/orders`
     --data `{
         "order_date": "2024-02-22",
         "number_of_items": 1,
-        "customer_id": 3,
-        "book_id": [2]
+        "customer_id": "3mys",
+        "book_id": ["8ajv"]
         }'
     ```
 
-    The Bookstore Management API returns a `201 Created`, along with a response body like the following:
+    The Bookstore Management API returns a `201 Created`, along with a response body similar to the following:
 
     ```json
     {
-        "status": "PASS",
-        "message": "Order created",
-        "order_id": 3
+      "id": "8kdt",
+      "order_date": "2024-04-19",
+      "items": 1,
+      "customer_id": "3mys",
+      "book_id": [
+        "5rzn"
+      ],
+      "subtotal": "9.99",
+      "tax": "0.89",
+      "total": "10.88"
     }
     ```
 

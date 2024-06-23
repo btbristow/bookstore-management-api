@@ -3,11 +3,11 @@ layout: page
 ---
 # PATCH customers
 
-Use `PATCH` with the `customers` endpoint to update customer information. For example, you might use this method to update a customer email address.
+Use `PATCH` with the `customers` endpoint to update customer information. For example, you might use this method to update a customer's email address.
 
 ## Request
 
-To update customer information with `PATCH`, use the following curl request with your own `{server_url}` and `{port}`:
+To update customer information using `PATCH`, enter a curl request similar to the following, along with your own `{server_url}` and `{port}`:
 
 ```bash
 curl -X PATCH \
