@@ -10,7 +10,7 @@ Use `PATCH` with the `books` endpoint to update book information. You will use t
 
 ## Request
 
-To update a book with `PATCH`, use the following curl request. Supply your own `{server_url}` and `{port}`, along with a valid book `id`:
+To update a book with `PATCH`, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, along with a valid book `id`:
 
 ```bash
 curl -X PATCH \

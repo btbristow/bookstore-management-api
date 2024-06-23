@@ -11,7 +11,7 @@ Use `POST` with the `books` endpoint to create new books in the store inventory.
 
 ## Request
 
-To `POST` a new book via curl, use the following request with your own `{server_url}` and `{port}` values:
+To add a new book using curl, enter a `POST` request similar to the following, along with your own `{server_url}` and `{port}`:
 
 ```bash
 curl -X POST '{server_url}:{port}/books' \
@@ -25,6 +25,8 @@ curl -X POST '{server_url}:{port}/books' \
     "ISBN-10": 9780394480763,
     "genre": "non-fiction",
     "format": "paperback",
+    "condition": "new",
+    "price": "15.99",
     "in_stock": 1,
 }'
 ```

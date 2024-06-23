@@ -7,7 +7,9 @@ Use `POST` with the `orders` endpoint to create new orders. You can add multiple
 
 ## Request
 
-To `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, as well one or more `book_id` properties and a `customer_id` property:
+To add a new order, use a `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, as well one or more `book_id` properties and a `customer_id` property:
+
+To add a new order using curl, enter a `POST` request similar to the following. Supply your own `{server_url}` and `{port}`, along with one or more valid `book_id` properties and a valid `customer_id` property:
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \
@@ -15,8 +17,11 @@ curl -X POST '{server_url}:{port}/orders' \
 --data `{
     "order_date": "2024-02-22",
     "number_of_items": 1,
-    "customer_id": 3,
-    "book_id": [2]
+    "customer_id": "2ogb",
+    "book_id": ["7dpc"],
+    "subtotal": "7.99",
+    "tax": "0.71",
+    "total": "8.70"
   }'
 ```
 

@@ -3,11 +3,11 @@ layout: page
 ---
 # Customers
 
-Use the `customers` endpoint to build customer management features. For example, add a form to enter new customer details. Or, edit existing customer details.
+Use the `customers` endpoint when building customer management features. For example, add a form where booksellers enter new customer details or edit existing ones.
 
 ## Request
 
-To call the `customers` endpoint with curl, use `curl -X GET {server_url}:{port}/customers`.
+To call the `customers` endpoint using curl, enter `curl -X GET {server_url}:{port}/customers`.
 
 ## Response
 
