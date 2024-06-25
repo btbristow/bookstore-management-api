@@ -1,14 +1,19 @@
 ---
-layout: page
+layout: single
+title: DELETE books
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
+Use `DELETE` with the `books` endpoint to remove books from a store's inventory. 
 
-# DELETE books
-
-Use `DELETE` with the `books` endpoint to remove books from a store's inventory. This method is used when a store will no longer carry a book, rather than when a book is out of stock.
+**Note:** Use this method to remove a book from the store catalog. To set the number of book copies to zero, use [PATCH books](patch-books.md) with `in_stock` instead.
+{: .notice--info}
 
 ## Request
 
-To `DELETE` a book using curl, enter `curl -X DELETE http://{server_url}:{port}/books/{id}` with your own `{server_url}` and `{port}` and a valid book `id`.
+To `DELETE` a book using curl, enter `curl -X DELETE http://{server_url}:{port}/books/{id}` with your server and port and a valid book `id`.
 
 ## Response
 

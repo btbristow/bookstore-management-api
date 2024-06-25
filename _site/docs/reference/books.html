@@ -1,0 +1,113 @@
+<h1 id="books">Books</h1>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">books</code> endpoint when building inventory management features. For example, add a menu item that returns a <a href="../tutorials/get-store-inventory.md">list of books</a> in stock or a form where booksellers add new books from deliveries.</p>
+
+<h2 id="request">Request</h2>
+
+<p>To call the <code class="language-plaintext highlighter-rouge">books</code> endpoint using curl, enter <code class="language-plaintext highlighter-rouge">curl -X GET {server_url}{port}/books</code>.</p>
+
+<h2 id="response">Response</h2>
+
+<p>The following sections contain an example response with a complete book object. They also list property definitions.</p>
+
+<h3 id="response-example">Response Example</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9hne"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Mysteries of Pittsburgh"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"author_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chabon"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"author_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Michael"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Road Media"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"year_published"</span><span class="p">:</span><span class="w"> </span><span class="mi">2011</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ISBN-10"</span><span class="p">:</span><span class="w"> </span><span class="mi">9781453234099</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fiction"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hardcover"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24.99"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"in_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="response-properties">Response Properties</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Property</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>string</td>
+      <td>Indicates the book’s unique identifier.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>string</td>
+      <td>Indicates the book title, which can differ by <code class="language-plaintext highlighter-rouge">ISBN-10</code> for the same title.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">author_last_name</code></td>
+      <td>string</td>
+      <td>Indicates the author’s last name.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">author_first_name</code></td>
+      <td>string</td>
+      <td>Indicates the author’s first name.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">publisher</code></td>
+      <td>string</td>
+      <td>Indicates the book publisher.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">year_published</code></td>
+      <td>string</td>
+      <td>Indicates the year the edition was published.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ISBN-10</code></td>
+      <td>number</td>
+      <td>Indicates the ISBN-10 number. ISBN-13 is not supported.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">genre</code></td>
+      <td>string</td>
+      <td>Indicates the book genre, for example, <strong>nonfiction</strong>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">format</code></td>
+      <td>string</td>
+      <td>Indicates the book format as <strong>paperback</strong> or <strong>hardcover</strong>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">condition</code></td>
+      <td>string</td>
+      <td>Indicates if the book is <strong>new</strong> or <strong>used</strong>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">price</code></td>
+      <td>string</td>
+      <td>Indicates the book price in USD using dollars and cents, for example <em>9.99</em> or <em>24.99</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">in_stock</code></td>
+      <td>number</td>
+      <td>Indicates the number of copies of the book in stock.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="methods">Methods</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">books</code> endpoint supports the following methods:</p>
+
+<ul>
+  <li><a href="post-books.md">POST books</a></li>
+  <li><a href="patch-books.md">PATCH books</a></li>
+  <li><a href="reference/delete-books.md">DELETE books</a></li>
+</ul>

@@ -1,0 +1,77 @@
+<h1 id="get-store-inventory">Get store inventory</h1>
+
+<p>This tutorial takes about ten minutes to complete and explains how to <code class="language-plaintext highlighter-rouge">GET</code> a store’s inventory from the <code class="language-plaintext highlighter-rouge">/books</code> endpoint. It also contains an example response and provides next steps for troubleshooting errors.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>To complete this tutorial, you need command line access to curl and must be able to send requests to the Bookstore Management API. You can integrate the API with your test environment or run it locally.</p>
+
+<p>To learn how to run the API locally, see <a href="test-with-json-server.md">Test with JSON Server</a>.</p>
+
+<h2 id="send-the-request">Send the request</h2>
+
+<p>You can get a store’s inventory with a single API request.</p>
+
+<ul>
+  <li>
+    <p>To get a store’s inventory, enter <code class="language-plaintext highlighter-rouge">curl -X GET {server_url}:{port}/books</code>.</p>
+
+    <blockquote>
+      <p><strong>Tip:</strong>
+For example, if using json-server, you might enter <code class="language-plaintext highlighter-rouge">curl -X GET localhost:3000/books</code>.</p>
+    </blockquote>
+
+    <p>The Bookstore Management API returns a <code class="language-plaintext highlighter-rouge">200 OK</code> along with a JSON response body in the following format.</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5rzn"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mastering the Art of French Cooking, Vol. 1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"author_last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Child"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"author_first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Julia"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"publisher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Knopf Doubleday Publishing Group"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year_published"</span><span class="p">:</span><span class="w"> </span><span class="mi">2011</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ISBN-10"</span><span class="p">:</span><span class="w"> </span><span class="mi">9780307958174</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cookbooks"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hardcover"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"condition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"used"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.99"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"in_stock"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Note:</strong> Out of stock books appear in this request with <code class="language-plaintext highlighter-rouge">"in_stock": 0</code>. To delete books that a store has ceased to carry, see <a href="delete-books.md">DELETE books</a>.</p>
+</blockquote>
+
+<h2 id="troubleshoot-errors">Troubleshoot errors</h2>
+
+<p>The following table lists errors you may encounter, along with suggested resolutions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status code</th>
+      <th>Fix by…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>404 Not Found</td>
+      <td>Check your API request for typos.</td>
+    </tr>
+    <tr>
+      <td>ECONNREFUSED</td>
+      <td>Restart JSON Server.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="related-topics">Related topics</h2>
+
+<ul>
+  <li><a href="tutorials/create-an-order.md">Create an order</a></li>
+  <li><a href="tutorials/update-store.md">Update a store</a></li>
+  <li><a href="tutorials/orders-customer-date.md">Get orders by customer or date</a></li>
+</ul>

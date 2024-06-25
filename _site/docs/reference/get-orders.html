@@ -1,0 +1,52 @@
+<h1 id="get-orders-by-customer">GET orders by customer</h1>
+
+<p>You can make a <code class="language-plaintext highlighter-rouge">GET</code> reqest to the <code class="language-plaintext highlighter-rouge">/orders</code> endpoint that applies query parameters to list all orders from one customer. Use the same method to get any supported property in the Bookstore Management API.</p>
+
+<h2 id="request">Request</h2>
+
+<p>To <code class="language-plaintext highlighter-rouge">GET</code> orders by customer using curl, enter <code class="language-plaintext highlighter-rouge">curl -X GET http://{server_url}:{port}/orders?customer_id={customer_id}</code> with your own <code class="language-plaintext highlighter-rouge">{server_url}</code> and <code class="language-plaintext highlighter-rouge">{port}</code> and a valid order <code class="language-plaintext highlighter-rouge">id</code>.</p>
+
+<h2 id="response">Response</h2>
+
+<p>The following sections list supported success and error responses.</p>
+
+<h3 id="success-response">Success response</h3>
+
+<p>A successful <code class="language-plaintext highlighter-rouge">GET</code> request for orders by customer returns a <code class="language-plaintext highlighter-rouge">200 OK</code> along with a JSON array that contains the orders, as shown in <a href="orders.md#response">Orders</a>.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>
+If you send incorrect query parameters (such as the wrong property name), you receive a <code class="language-plaintext highlighter-rouge">200 OK</code> with an empty array <code class="language-plaintext highlighter-rouge">[]</code>. When this happens, confirm the properties and syntax in your request.</p>
+</blockquote>
+
+<h3 id="error-response">Error response</h3>
+
+<p>An error response contains one of the following HTTP status codes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>404 Not Found</td>
+      <td>The server could not find the requested resource.</td>
+    </tr>
+    <tr>
+      <td>ECONNREFUSED</td>
+      <td>The service is unavailable.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="related-topics">Related Topics</h2>
+
+<ul>
+  <li><a href="orders.md">Orders</a></li>
+  <li><a href="post-orders.md">POST orders</a></li>
+  <li><a href="patch-orders.md">PATCH orders</a></li>
+  <li><a href="delete-orders.md">DELETE orders</a></li>
+</ul>

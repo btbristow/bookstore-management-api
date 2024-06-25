@@ -1,8 +1,11 @@
 ---
-layout: page
+layout: single
+title: Create an order
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Create an order
-
 This tutorial takes about 20 minutes to complete and presents a standard order creation workflow. You start by listing the books in stock, add a new customer, and then create an order that references both the customer and the book purchased.
 
 ## Prerequisites

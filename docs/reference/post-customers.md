@@ -1,13 +1,16 @@
 ---
-layout: page
+layout: single
+title: POST customers
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# POST customers
-
 Use `POST` with the `customers` endpoint to create new customers in the store database. You can add multiple customers in one request body. You must create customers before you create orders.
 
 ## Request
 
-To add a new customer using curl, enter a `POST` request similar to the following, along with your own `{server_url}` and `{port}`:
+To add a new customer using curl, enter a `POST` request similar to the following, along with your server and port:
 
 ```bash
 curl -X POST '{server_url}:{port}/customers' \

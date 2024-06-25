@@ -1,16 +1,18 @@
 ---
-layout: page
+layout: single
+title: PATCH books
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# PATCH books
-
 Use `PATCH` with the `books` endpoint to change book information. You will use this method most commonly to update the number of books in stock.
 
-> **Note:**
-> To add books that a store has not previously carried, use [POST books](post-books.md) instead.
+**Note:** To add books that a store has not previously carried, use [POST books](post-books.md) instead.
+{: .notice--info}
 
 ## Request
 
-To update a book with `PATCH`, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, along with a valid book `id`:
+To update a book with `PATCH`, use a curl request similar to the following. Supply your server and port, and a valid book `id`:
 
 ```bash
 curl -X PATCH \
