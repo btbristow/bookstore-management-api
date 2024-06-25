@@ -1,0 +1,197 @@
+{
+  "books": [
+    {
+      "id": "9hne",
+      "title": "The Mysteries of Pittsburgh",
+      "author_last_name": "Chabon",
+      "author_first_name": "Michael",
+      "publisher": "Open Road Media",
+      "year_published": 2011,
+      "ISBN-10": 9781453234099,
+      "genre": "fiction",
+      "format": "hardcover",
+      "condition": "new",
+      "price": "24.99",
+      "in_stock": 2
+    },
+    {
+      "id": "7dpc",
+      "title": "Fight Club: A Novel",
+      "author_last_name": "Palahniuk",
+      "author_first_name": "Chuck",
+      "publisher": "W. W. Norton",
+      "year_published": 2005,
+      "ISBN-10": 9780393066395,
+      "genre": "fiction",
+      "format": "paperback",
+      "condition": "used",
+      "price": "7.99",
+      "in_stock": 3
+    },
+    {
+      "id": "8ajv",
+      "title": "Infinite Jest",
+      "author_last_name": "Wallace",
+      "author_first_name": "David Foster",
+      "publisher": "Little, Brown",
+      "year_published": 1996,
+      "ISBN-10": 9780316073851,
+      "genre": "fiction",
+      "format": "hardcover",
+      "condition": "new",
+      "price": "24.99",
+      "in_stock": 2
+    },
+    {
+      "id": "9rdk",
+      "title": "The Power Broker: Robert Moses and the Fall of New York",
+      "author_last_name": "Caro",
+      "author_first_name": "Robert A.",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 1974,
+      "ISBN-10": 9780394480763,
+      "genre": "non-fiction",
+      "format": "paperback",
+      "condition": "new",
+      "price": "14.99",
+      "in_stock": 1
+    },
+    {
+      "id": "5rzn",
+      "title": "Mastering the Art of French Cooking, Vol. 1",
+      "author_last_name": "Child",
+      "author_first_name": "Julia",
+      "publisher": "Knopf Doubleday Publishing Group",
+      "year_published": 2011,
+      "ISBN-10": 9780307958174,
+      "genre": "cookbooks",
+      "format": "hardcover",
+      "condition": "used",
+      "price": "9.99",
+      "in_stock": 2
+    },
+    {
+      "id": "099c",
+      "title": "American Gods",
+      "author_last_name": "Gaiman",
+      "author_first_name": "Neil",
+      "publisher": "Harper Collins",
+      "year_published": 2002,
+      "ISBN-10": 9780380789030,
+      "genre": "fiction",
+      "format": "paperback",
+      "condition": "new",
+      "price": "15.99",
+      "in_stock": 5
+    },
+    {
+      "id": "988c",
+      "title": "Oryx and Crake",
+      "author_last_name": "Atwood",
+      "author_first_name": "Margaret",
+      "publisher": "Knopf Canada",
+      "year_published": 2010,
+      "ISBN-10": 9780307400840,
+      "genre": "fiction",
+      "format": "hardcover",
+      "condition": "new",
+      "price": "19.99",
+      "in_stock": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": "3mys",
+      "last_name": "Smith",
+      "first_name": "Brian",
+      "telephone": 2122371641,
+      "email": "brian.smith@fastmail.com"
+    },
+    {
+      "id": "8azr",
+      "last_name": "Jones",
+      "first_name": "Jenny",
+      "telephone": 7187451673,
+      "email": "jjones@proton.me"
+    },
+    {
+      "id": "4nad",
+      "last_name": "Rafferty",
+      "first_name": "Terrence",
+      "telephone": 9176636448,
+      "email": "raffterr@aol.com"
+    },
+    {
+      "id": "2ogb",
+      "last_name": "Jameson",
+      "first_name": "Michael",
+      "telephone": 2018724543,
+      "email": "mjameson@gmail.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": "8gnq",
+      "order_date": "2023-06-02",
+      "items": 3,
+      "customer_id": "8azr",
+      "book_id": [
+        "9hne",
+        "7dpc",
+        "8ajv"
+      ],
+      "subtotal": "57.97",
+      "tax": "5.14",
+      "total": "63.11"
+    },
+    {
+      "id": "9fmo",
+      "order_date": "2024-02-22",
+      "items": 1,
+      "customer_id": "2ogb",
+      "book_id": [
+        "7dpc"
+      ],
+      "subtotal": "7.99",
+      "tax": "0.71",
+      "total": "8.70"
+    },
+    {
+      "id": "8pij",
+      "order_date": "2023-12-20",
+      "items": 2,
+      "customer_id": "2ogb",
+      "book_id": [
+        "7dpc",
+        "9rdk"
+      ],
+      "subtotal": "22.98",
+      "tax": "2.04",
+      "total": "25.02"
+    },
+    {
+      "id": "7izt",
+      "order_date": "2024-4-19",
+      "items": 1,
+      "customer_id": "4nad",
+      "book_id": [
+        "9hne"
+      ],
+      "subtotal": "24.99",
+      "tax": "2.22",
+      "total": "27.21"
+    },
+    {
+      "id": "8kdt",
+      "order_date": "2024-04-19",
+      "items": 1,
+      "customer_id": "4nad",
+      "book_id": [
+        "5rzn"
+      ],
+      "subtotal": "9.99",
+      "tax": "0.89",
+      "total": "10.88"
+    }
+  ]
+}

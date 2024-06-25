@@ -1,17 +1,20 @@
 ---
-layout: page
+layout: single
+title: customers
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Customers
-
-Use the `customers` endpoint when building customer management features. For example, add a form where booksellers enter new customer details or edit existing ones.
+Use the `customers` endpoint when building customer management features. For example, add a modal where where booksellers enter new customer details.
 
 ## Request
 
-To call the `customers` endpoint using curl, enter `curl -X GET {server_url}:{port}/customers`.
+To call the `customers` endpoint using curl, enter `curl -X GET {server_url}:{port}/customers` with your server and port.
 
 ## Response
 
-The following sections contain an example response with a complete customer object. They also list property definitions.
+The following sections contain an example response and property definitions.
 
 ### Response Example
 

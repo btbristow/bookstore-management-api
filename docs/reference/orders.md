@@ -1,17 +1,20 @@
 ---
-layout: page
+layout: single
+title: orders
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Orders
-
-Use the `orders` endpoint to build order management features. The `orders` endpoint contains information about the other endpoints and is designed for custom requests. For example, get a list of books ordered by a certain customer, as described in [GET orders by customer](get-orders.md)
+Use the `orders` endpoint to build order management features. The `orders` endpoint contains information about the other endpoints and is designed for custom requests. For example, get a list of books [ordered by a certain customer](get-orders.md).
 
 ## Request
 
-To call the `orders` endpoint using curl, enter `curl -X GET {server_url}/orders`.
+To call the `orders` endpoint using curl, enter `curl -X GET {server_url}/orders` with your server and port.
 
 ## Response
 
-The following sections contain an example response with a complete orders object. They also define object properties.
+The following sections contain an example response and property definitions.
 
 ### Response Example
 

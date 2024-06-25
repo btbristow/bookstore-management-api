@@ -1,38 +1,43 @@
 ---
-layout: page
+layout: single
+title: Bookstore Management API
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Bookstore Management API
+The Bookstore Management API connects your bookstore app's user interface to its back end and is designed for bookseller workflows. Use it to build an app for any store: new or used, general or specialty, online or off.
 
-The Bookstore Management API connects to your custom bookstore application's back end and is designed for bookseller workflows. Use it to customize your application for any store: new or used, specialty or general, online or off.
+This documentation contains everything you need to test and implement the Bookstore Management API.
 
-The Bookstore Management API has the following features:
+**The Bookstore Management API supports:**
 
-* Comprehensive book inventory management based on the ISBN-10 standard.
-* CRUD operation support for your inventory and order databases.
-* Integration with your point-of-sale systems.
+* Comprehensive book inventory management.
+* CRUD operations on your inventory, customer, and order databases.
+* Integration with point-of-sale systems.
 
 ## Get Started
 
-This documentation contains everything you need to test and implement the Bookstore Management API. To get started, see the following topics:
+Start by using a mock API service to make your first request.
 
-* [Test with JSON Server](tutorials/test-with-json-server.md) — Install JSON Server to test the API locally.
-* [Get store inventory](tutorials/get-store-inventory.md) — Using curl, list an example store inventory.
+* [Test with JSON Server](tutorials/test-with-json-server.md) — Test locally with no integration.
+* [Get store inventory](tutorials/get-store-inventory.md) — Get an example list of books in stock.
 
 ## Tutorials
 
-The following tutorials outline common bookseller use cases. Refer to them when designing a user-centric application for any store:
+Review common bookseller workflows and use them to build a user-centric app for any store.
 
 * [Create an order](tutorials/create-an-order.md) — Get a book title, add a customer, and create a new order.
-* [Update a store](tutorials/update-store.md) — Update the books in stock, customer contact information, and order details.
-* [Get orders by customer or date](tutorials/orders-customer-date.md) — With query parameters, get orders by customer or order date.
+* [Update a store](tutorials/update-store.md) — Update the books in stock, then edit customer and order details.
+* [Get orders by customer or date](tutorials/orders-customer-date.md) — Use query parameters to list orders by different criteria.
 
 ## Reference
 
-The Bookstore Management API has three endpoints. The following topics contain reference information:
+The following topics contain reference content for the three endpoints in the Bookstore Management API.
 
 ### Books endpoint
 
-The **[Books endpoint](reference/books.md)** connects your user interface to your inventory database. It supports the following methods:
+The **[books endpoint](reference/books.md)** connects to your inventory database and supports the following methods:
 
 * [POST books](reference/post-books.md)
 * [PATCH books](reference/patch-books.md)
@@ -48,9 +53,8 @@ The **[Customers endpoint](reference/customers.md)** sends customer details to y
 
 ### Orders endpoint
 
-The **[Orders endpoint](reference/orders.md)** supports your order management and point-of-sale systems through the following methods:
+The **[Orders endpoint](reference/orders.md)** supports order management and point-of-sale systems through the following methods:
 
-* [GET orders by customer](reference/get-orders.md)
 * [POST orders](reference/post-orders.md)
 * [PATCH orders](reference/patch-orders.md)
 * [DELETE orders](reference/delete-orders.md)

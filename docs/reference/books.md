@@ -1,17 +1,20 @@
 ---
-layout: page
+layout: single
+title: books
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Books
-
-Use the `books` endpoint when building inventory management features. For example, add a menu item that returns a [list of books](../tutorials/get-store-inventory.md) in stock or a form where booksellers add new books from deliveries.
+Use the `books` endpoint when building inventory management features. For example, add a form where booksellers enter new books from deliveries.
 
 ## Request
 
-To call the `books` endpoint using curl, enter `curl -X GET {server_url}{port}/books`.
+To call the `books` endpoint using curl, enter `curl -X GET {server_url}{port}/books` with your server and port.
 
 ## Response
 
-The following sections contain an example response with a complete book object. They also list property definitions.
+The following sections contain an example response and property definitions.
 
 ### Response Example
 

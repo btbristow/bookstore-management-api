@@ -1,17 +1,19 @@
 ---
-layout: page
+layout: single
+title: POST books
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-
-# POST books
-
 Use `POST` with the `books` endpoint to create new books in the store inventory. When testing with JSON Server, you must add one book at a time.
 
-> **Note**
-> To update the number of copies of _existing_ books, use [PATCH books](patch-books.md) with the `in_stock` property instead.
+**Note:** To update the number of book copies in stock, use [PATCH books](patch-books.md) with `in_stock` instead.
+{: .notice--info}
 
 ## Request
 
-To add a new book using curl, enter a `POST` request similar to the following, along with your own `{server_url}` and `{port}`:
+To add a new book using curl, enter a `POST` request similar to the following, along with your server and port:
 
 ```bash
 curl -X POST '{server_url}:{port}/books' \
