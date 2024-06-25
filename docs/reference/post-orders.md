@@ -1,15 +1,16 @@
 ---
-layout: page
+layout: single
+title: POST orders
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# POST orders
-
 Use `POST` with the `orders` endpoint to create new orders. You can add multiple orders to a request body. Orders must contain at least one `book_id` and `customer_id`, as described in [Create an order](../tutorials/create-an-order.md)
 
 ## Request
 
-To add a new order, use a `POST` an order, use a curl request similar to the following. Supply your own `{server_url}` and `{port}`, as well one or more `book_id` properties and a `customer_id` property:
-
-To add a new order using curl, enter a `POST` request similar to the following. Supply your own `{server_url}` and `{port}`, along with one or more valid `book_id` properties and a valid `customer_id` property:
+To add a new order using curl, enter a `POST` request similar to the following. Supply your own server and port, valid `book_id` properties, and a valid `customer_id`:
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \

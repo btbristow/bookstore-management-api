@@ -1,8 +1,11 @@
 ---
-layout: page
+layout: single
+title: Update a store
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Update a store
-
 This tutorial takes about 15 minutes to complete and presents a workflow where you add books from a delivery, update customer information, and edit an order.
 
 ## Prerequisites
@@ -23,7 +26,7 @@ curl -X PATCH '{server_url}:{port}/books/988c' \
   }'
 ```
 
-The Bookstore Management API returns a `200 OK` with a response body that contains the updated book—in this case, Oryx and Crake by Margaret Atwood:
+The Bookstore Management API returns a `200 OK` with a response body that contains the updated book:
 
 ```json
 {
@@ -42,7 +45,7 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 }
 ```
 
-## Step 2: Update customer information
+## Step 2: Change customer details
 
 To update a customer phone number, enter the following `PATCH` request. Supply your own `{server_url}` and `{port}`:
 
@@ -66,11 +69,12 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 }
 ```
 
-## Step 3: Update books in an order
+## Step 3: Edit an order
 
 To update a the books in an order, enter the following `PATCH` request. Supply your own `{server_url}` and `{port}`:
 
-> **Note:** In the following request, be sure to change `order_date`, `subtotal`, `tax`, and `total` to correctly update your order management system.
+**Note:** In the following request, be sure to change `order_date`, `subtotal`, `tax`, and `total` to correctly update your order management system.
+{: .notice--info}
 
 ```bash
 curl -X PATCH '{server_url}:{port}/books/9fmo' \

@@ -1,8 +1,11 @@
 ---
-layout: page
+layout: single
+title: Get a store inventory
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# Get store inventory
-
 This tutorial takes about ten minutes to complete and explains how to `GET` a store's inventory from the `/books` endpoint. It also contains an example response and provides next steps for troubleshooting errors.
 
 ## Prerequisites
@@ -11,14 +14,14 @@ To complete this tutorial, you need command line access to curl and must be able
 
 To learn how to run the API locally, see [Test with JSON Server](test-with-json-server.md).
 
-## Send the request
+## Send your first request
 
 You can get a store's inventory with a single API request.
 
-* To get a store's inventory, enter `curl -X GET {server_url}:{port}/books`.
+* To get a store's inventory, enter `curl -X GET {server_url}:{port}/books` with your server and port.
 
-    > **Tip:**
-    > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.
+    **Tip:** For example, if using json-server, enter `curl -X GET localhost:3000/books`.
+    {: .notice--success}
 
     The Bookstore Management API returns a `200 OK` along with a JSON response body in the following format.
 
@@ -39,7 +42,8 @@ You can get a store's inventory with a single API request.
     }
     ```
 
-> **Note:** Out of stock books appear in this request with `"in_stock": 0`. To delete books that a store has ceased to carry, see [DELETE books](delete-books.md).
+**Note:** Out of stock books appear in this request with `"in_stock": 0`.
+{: .notice--info}
 
 ## Troubleshoot errors
 

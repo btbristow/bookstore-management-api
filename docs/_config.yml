@@ -1,0 +1,9 @@
+title: Bookstore Management API
+description: For bookstore apps and book lovers
+url: https://btbristow.github.io/bookstore-management-api
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+atom_feed:
+  hide: true

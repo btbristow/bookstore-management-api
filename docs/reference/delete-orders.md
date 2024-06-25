@@ -1,14 +1,16 @@
 ---
-layout: page
+layout: single
+title: DELETE orders
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-
-# DELETE orders
-
-Use `DELETE` with the `orders` endpoint to remove orders from a store's order management system (for example, to cancel an order).
+Use `DELETE` with the `orders` endpoint to remove orders from a store's order management system—for example, to cancel an order.
 
 ## Request
 
-To `DELETE` an order using curl, enter `curl -X DELETE http://{server_url}:{port}/orders/{id}` with your own `{server_url}` and `{port}` and a valid order `id`.
+To `DELETE` an order using curl, enter `curl -X DELETE http://{server_url}:{port}/orders/{id}` with your server and port and a valid order `id`.
 
 ## Response
 
