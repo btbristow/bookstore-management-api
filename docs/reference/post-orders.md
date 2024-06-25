@@ -6,11 +6,13 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use `POST` with the `orders` endpoint to create new orders. You can add multiple orders to a request body. Orders must contain at least one `book_id` and `customer_id`, as described in [Create an order](../tutorials/create-an-order.md)
+Use `POST` with the `orders` endpoint to create new orders. When testing with JSON Server, you must add one customer at a time.
+
+Orders must contain at least one `book_id` and `customer_id`, as described in [Create an order](../tutorials/create-an-order.md)
 
 ## Request
 
-To add a new order using curl, enter a `POST` request similar to the following. Supply your own server and port, valid `book_id` properties, and a valid `customer_id`:
+To add a new order, enter a `POST` request similar to the following with your server and port. Supply valid `book_id` properties and a valid `customer_id`.
 
 ```bash
 curl -X POST '{server_url}:{port}/orders' \
@@ -28,15 +30,15 @@ curl -X POST '{server_url}:{port}/orders' \
 
 ## Response
 
-The following sections list the success and error responses that the `POST orders` method supports.
+The following sections describe possible responses from the `orders` endpoint when using the `POST` method.
 
 ### Success response code
 
-A successful `POST` returns `201 Created` along with the complete book object, including a new `id` property (for example, `"id": "3f50"`).
+A successful `POST` returns `201 Created` with the order object, including a new `id` property (for example, `"id": "3f50"`).
 
 ### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error contains one of the following HTTP response status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -46,6 +48,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-* [Orders](reference/orders.md)
-* [PATCH orders](reference/patch-orders.md)
-* [DELETE orders](reference/delete-orders.md)
+* [Orders](orders.md)
+* [PATCH orders](patch-orders.md)
+* [DELETE orders](delete-orders.md)

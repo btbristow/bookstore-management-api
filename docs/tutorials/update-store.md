@@ -6,7 +6,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-This tutorial takes about 15 minutes to complete and presents a workflow where you add books from a delivery, update customer information, and edit an order.
+This tutorial takes about 15 minutes to complete and explains how to use `PATCH` to add delivered books, update customer details, and edit orders.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 ## Step 1: Update books in stock
 
-To update the number of books in stock after a delivery, enter the following `PATCH` request. Supply your own `{server_url}` and `{port}`:
+To update the number of books in stock, enter the following request with your server and port:
 
 ```bash
 curl -X PATCH '{server_url}:{port}/books/988c' \
@@ -47,7 +47,7 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 
 ## Step 2: Change customer details
 
-To update a customer phone number, enter the following `PATCH` request. Supply your own `{server_url}` and `{port}`:
+To update a customer phone number, enter the following request with your server and port:
 
 ```bash
 curl -X PATCH '{server_url}:{port}/books/988c' \
@@ -71,9 +71,9 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 
 ## Step 3: Edit an order
 
-To update a the books in an order, enter the following `PATCH` request. Supply your own `{server_url}` and `{port}`:
+To update the books in an order, enter the following request with your server and port.
 
-**Note:** In the following request, be sure to change `order_date`, `subtotal`, `tax`, and `total` to correctly update your order management system.
+**Note:** Be sure to change `order_date`, `subtotal`, `tax`, and `total` to account for the new book in your order management system.
 {: .notice--info}
 
 ```bash
@@ -113,5 +113,5 @@ The Bookstore Management API returns a `200 OK` with a response body that contai
 ## Related topics
 
 * [Get store inventory](get-store-inventory.md)
-* [Create an order](tutorials/create-an-order.md)
-* [Get orders by customer or date](tutorials/orders-customer-date.md)
+* [Create an order](create-an-order.md)
+* [Get orders by customer or date](orders-customer-date.md)

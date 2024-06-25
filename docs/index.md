@@ -6,7 +6,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-The Bookstore Management API connects your bookstore app's user interface to its back end and is designed for bookseller workflows. Use it to build an app for any store: new or used, general or specialty, online or off.
+The Bookstore Management API brings bookseller workflows to your bookstore app. Use it to build custom apps for any store: new or used, general or specialty, online or off.
 
 This documentation contains everything you need to test and implement the Bookstore Management API.
 
@@ -18,26 +18,26 @@ This documentation contains everything you need to test and implement the Bookst
 
 ## Get Started
 
-Start by using a mock API service to make your first request.
+Start by using a mock API service to send your first request.
 
 * [Test with JSON Server](tutorials/test-with-json-server.md) — Test locally with no integration.
 * [Get store inventory](tutorials/get-store-inventory.md) — Get an example list of books in stock.
 
 ## Tutorials
 
-Review common bookseller workflows and use them to build a user-centric app for any store.
+Review common workflows before building them into your app.
 
-* [Create an order](tutorials/create-an-order.md) — Get a book title, add a customer, and create a new order.
-* [Update a store](tutorials/update-store.md) — Update the books in stock, then edit customer and order details.
+* [Create an order](tutorials/create-an-order.md) — Get a book and create a customer; use them in a new order.
+* [Update a store](tutorials/update-store.md) — Update the books in stock; edit customer and order details.
 * [Get orders by customer or date](tutorials/orders-customer-date.md) — Use query parameters to list orders by different criteria.
 
 ## Reference
 
-The following topics contain reference content for the three endpoints in the Bookstore Management API.
+Review reference topics for the Bookstore Management API's three endpoints.
 
 ### Books endpoint
 
-The **[books endpoint](reference/books.md)** connects to your inventory database and supports the following methods:
+The **[books endpoint](reference/books.md)** connects to your inventory database.
 
 * [POST books](reference/post-books.md)
 * [PATCH books](reference/patch-books.md)
@@ -45,7 +45,7 @@ The **[books endpoint](reference/books.md)** connects to your inventory database
 
 ### Customers endpoint
 
-The **[Customers endpoint](reference/customers.md)** sends customer details to your customer database and supports the following methods:
+The **[customers endpoint](reference/customers.md)** connects to your customer database.
 
 * [POST customers](reference/post-customers.md)
 * [PATCH customers](reference/patch-customers.md)
@@ -53,7 +53,7 @@ The **[Customers endpoint](reference/customers.md)** sends customer details to y
 
 ### Orders endpoint
 
-The **[Orders endpoint](reference/orders.md)** supports order management and point-of-sale systems through the following methods:
+The **[Orders endpoint](reference/orders.md)** supports your order management and point-of-sale systems.
 
 * [POST orders](reference/post-orders.md)
 * [PATCH orders](reference/patch-orders.md)

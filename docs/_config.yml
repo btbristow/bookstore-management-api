@@ -7,3 +7,9 @@ plugins:
   - jekyll-remote-theme
 atom_feed:
   hide: true
+enable_copy_code_button: true
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/btbristow/bookstore-management-api"

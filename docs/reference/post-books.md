@@ -6,20 +6,20 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use `POST` with the `books` endpoint to create new books in the store inventory. When testing with JSON Server, you must add one book at a time.
+Use `POST` with the `books` endpoint to create new books in a store inventory. When testing with JSON Server, you must add one book at a time.
 
-**Note:** To update the number of book copies in stock, use [PATCH books](patch-books.md) with `in_stock` instead.
+**Note:** To update the number of book copies in stock, use [PATCH books](patch-books.md) instead.
 {: .notice--info}
 
 ## Request
 
-To add a new book using curl, enter a `POST` request similar to the following, along with your server and port:
+To add a new book, enter a request similar to the following, with your server and port:
 
 ```bash
 curl -X POST '{server_url}:{port}/books' \
 --header 'Content-Type: application/json' \
 --data '{
-    "title": "The Power Broker: Robert Moses and the Fall of New York",
+    "title": "The Power Broker",
     "author_last_name": "Caro",
     "author_first_name": "Robert A.",
     "publisher": "Knopf Doubleday Publishing Group",
@@ -35,15 +35,15 @@ curl -X POST '{server_url}:{port}/books' \
 
 ## Response
 
-The following sections list the success and error responses that the `POST books` method supports.
+TThe following sections describe possible responses from the `books` endpoint when using the `POST` method.
 
 ### Success response
 
-A successful `POST` returns `201 Created` along with the complete book object, including a new `id` property (for example, `"id": "3f50"`).
+A successful `POST` returns `201 Created` with the book object, including a new `id` property (for example, `"id": "3f50"`).
 
 ### Error response
 
-An error response contains one of the following HTTP status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -55,4 +55,4 @@ An error response contains one of the following HTTP status codes.
 
 * [Books](books.md)
 * [PATCH books](patch-books.md)
-* [DELETE books](reference/delete-books.md)
+* [DELETE books](delete-books.md)

@@ -6,26 +6,26 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use `DELETE` with the `books` endpoint to remove books from a store's inventory. 
+Use `DELETE` with the `books` endpoint to remove books that a store will no longer carry.
 
-**Note:** Use this method to remove a book from the store catalog. To set the number of book copies to zero, use [PATCH books](patch-books.md) with `in_stock` instead.
+**Note:** To set the number of copies in stock to zero, use [PATCH books](patch-books.md) instead.
 {: .notice--info}
 
 ## Request
 
-To `DELETE` a book using curl, enter `curl -X DELETE http://{server_url}:{port}/books/{id}` with your server and port and a valid book `id`.
+To `DELETE` a book enter `curl -X DELETE http://{server_url}:{port}/books/{id}` with your server and port and a valid book `id`.
 
 ## Response
 
-The following sections list the success and error responses that the `DELETE books` method supports.
+The following sections describe possible responses from the `books` endpoint when using the `DELETE` method.
 
 ### Success response
 
-A successful `DELETE` returns `200 OK` along with the complete book object that was deleted.
+A successful `DELETE` returns `200 OK` with the deleted book object.
 
 ### Error response
 
-An error response contains one of the following HTTP status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -35,6 +35,6 @@ An error response contains one of the following HTTP status codes.
 
 ## Related Topics
 
-* [Books](reference/books.md)
-* [POST books](reference/post-books.md)
-* [PATCH books](reference/patch-books.md)
+* [Books](books.md)
+* [POST books](post-books.md)
+* [PATCH books](patch-books.md)
