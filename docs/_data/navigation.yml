@@ -1,0 +1,49 @@
+docs:
+  - title: Get Started
+    children:
+      - title: "Test with JSON Server"
+        url: /tutorials/test-with-json-server.html
+      - title: "Get a store inventory"
+        url: /tutorials/get-store-inventory.html
+
+  - title: Tutorials
+    children:
+      - title: "Create an order"
+        url: /tutorials/create-an-order.html
+      - title: "Update a store"
+        url: /tutorials/update-store.html
+      - title: "Get orders by customer or date"
+        url: /tutorials/orders-customer-date.html
+
+  - title: Books
+    children:
+      - title: "books"
+        url: /reference/books.html
+      - title: "POST books"
+        url: /reference/post-books.html
+      - title: "PATCH books"
+        url: /reference/patch-books.html
+      - title: "DELETE books"
+        url: /reference/delete-books.html
+
+  - title: Customers
+    children:
+      - title: "customers"
+        url: /reference/customers.html
+      - title: "POST customers"
+        url: /reference/post-customers.html
+      - title: "PATCH customers"
+        url: /reference/patch-customers.html
+      - title: "DELETE customers"
+        url: /reference/delete-customers.html
+
+  - title: Orders
+    children:
+      - title: "orders"
+        url: /reference/orders.html
+      - title: "POST orders"
+        url: /reference/post-orders.html
+      - title: "PATCH orders"
+        url: /reference/patch-orders.html
+      - title: "DELETE orders"
+        url: /reference/delete-orders.html

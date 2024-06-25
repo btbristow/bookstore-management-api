@@ -1,13 +1,16 @@
 ---
-layout: page
+layout: single
+title: PATCH orders
+toc: true
+toc_sticky: true
+sidebar:
+  nav: "docs"
 ---
-# PATCH orders
-
 Use `PATCH` with the `orders` endpoint to update order information. For example, build a feature to update the books purchased in an order.
 
 ## Request
 
-To update an order with `PATCH`, use a curl request similar to the following. The request should contain the properties to update (for example, another book and a new order total). Supply your own `{server_url}` and `{port}`, along with a valid order `id`:
+To update an order with `PATCH`, use a curl request similar to the following, which adds an additional book. Supply your server and port and a valid order `id`:
 
 ```bash
 curl -X PATCH '{server_url}:{port}/orders/{id}' \

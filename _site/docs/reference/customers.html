@@ -1,0 +1,71 @@
+<h1 id="customers">Customers</h1>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">customers</code> endpoint when building customer management features. For example, add a form where booksellers enter new customer details or edit existing ones.</p>
+
+<h2 id="request">Request</h2>
+
+<p>To call the <code class="language-plaintext highlighter-rouge">customers</code> endpoint using curl, enter <code class="language-plaintext highlighter-rouge">curl -X GET {server_url}:{port}/customers</code>.</p>
+
+<h2 id="response">Response</h2>
+
+<p>The following sections contain an example response with a complete customer object. They also list property definitions.</p>
+
+<h3 id="response-example">Response Example</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8zsx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jones"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jenny"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="mi">7187451673</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jjones@proton.me"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="response-properties">Response Properties</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Property</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>string</td>
+      <td>Indicates the customer’s unique identifier.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">last_name</code></td>
+      <td>string</td>
+      <td>Indicates the customer’s last name.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">first_name</code></td>
+      <td>string</td>
+      <td>Indicates the customer’s last name.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telephone</code></td>
+      <td>number</td>
+      <td>Indicates the customer’s phone number.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">email</code></td>
+      <td>string</td>
+      <td>Indicates the customer’s email address.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="methods">Methods</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">customers</code> endpoint supports the following methods:</p>
+
+<ul>
+  <li><a href="post-customers.md">POST customers</a></li>
+  <li><a href="patch-customers.md">PATCH customers</a></li>
+  <li><a href="delete-customers.md">DELETE customers</a></li>
+</ul>

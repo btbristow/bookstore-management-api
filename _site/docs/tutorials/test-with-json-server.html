@@ -1,0 +1,64 @@
+<p>This tutorial takes about 20 minutes to complete and explains how to test the Bookstore Management API on your local computer.</p>
+
+<p>You will use <a href="https://www.npmjs.com/package/json-server">JSON Server</a>, which simulates a REST API by substituting the database in your environment with a local JSON file.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>To complete this tutorial, you need the following:</p>
+
+<ul>
+  <li>A Windows, Mac, or Linux computer.</li>
+  <li>Access to <a href="https://curl.se/download.html">curl</a> on the command line.</li>
+  <li>
+    <p>A current or long-term support (LTS) version of <a href="https://nodejs.org/en/download/package-manager">Node.js</a>.</p>
+
+    <blockquote>
+      <p><strong>Tip:</strong>
+You will install JSON Server with Node Package Manager (npm). To run npm from any directory, add it to your system path after you install Node.js.</p>
+    </blockquote>
+  </li>
+  <li><em>(Optional)</em> A GitHub account and a Git client.</li>
+</ul>
+
+<h2 id="install-and-run-json-server">Install and run JSON Server</h2>
+
+<p>To install and run JSON Server:</p>
+
+<ol>
+  <li>
+    <p>On the command line, to install JSON Server, type <code class="language-plaintext highlighter-rouge">npm i json-server</code>.</p>
+  </li>
+  <li>
+    <p>On GitHub, use Git to clone the <a href="https://github.com/btbristow/bookstore-management-api">Bookstore Management API repository</a>. Or, simply download the repository.</p>
+  </li>
+  <li>
+    <p>On the command line, browse to <code class="language-plaintext highlighter-rouge">/path/to/bookstore-management-api-main/api</code>.</p>
+  </li>
+  <li>
+    <p>Do one of the following:</p>
+
+    <p>a. <strong>Windows</strong> — Type <code class="language-plaintext highlighter-rouge">bookstore-management.bat</code>.</p>
+
+    <p>b. <strong>macOS or Linux</strong> — Make the script to run executable by entering <code class="language-plaintext highlighter-rouge">chmod +x bookstore-management.sh</code>. Then, enter <code class="language-plaintext highlighter-rouge">./bookstore-management.sh</code>.</p>
+
+    <p>JSON Server starts in your terminal emulator and listens for API requests. Open a new terminal window to send them.</p>
+  </li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<p>If JSON Server fails to run, confirm that port 3000 is available on your network.</p>
+
+<p>To change the port, add <code class="language-plaintext highlighter-rouge">-p {port}</code> to the script file. For example, in <code class="language-plaintext highlighter-rouge">start-server.sh</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+json-server <span class="nt">-p</span> 3001 bookstore-management.json
+</code></pre></div></div>
+
+<h2 id="related-topics">Related topics</h2>
+
+<ul>
+  <li><a href="get-store-inventory.md">Get store inventory</a></li>
+  <li><a href="create-an-order.md">Create an order</a></li>
+  <li><a href="tutorials/orders-customer-date.md">Get orders by customer or date</a></li>
+</ul>
