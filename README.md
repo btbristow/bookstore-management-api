@@ -1,7 +1,5 @@
 # Bookstore Management API
 
-I designed this mock REST API and documentation site for [Specialization in API Documentation](https://www.pce.uw.edu/specializations/api-documentation), offered by the University of Washington. This API is only designed to run with [JSON Server](https://www.npmjs.com/package/json-server).
+An imaginary RESTful API designed for [Specialization in API Documentation](https://www.pce.uw.edu/specializations/api-documentation), offered by the University of Washington. The accompanying documentation site [is located here](https://btbristow.github.io/bookstore-management-api/).
 
-In the scenario I created, developers use the Bookstore Management API to build custom bookstore applications.
-
-The documentation site is [located here](https://btbristow.github.io/bookstore-management-api/).
+This API is only confirmed to work with [JSON Server](https://www.npmjs.com/package/json-server).

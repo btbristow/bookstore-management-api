@@ -5,14 +5,14 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use `PATCH` with the `books` endpoint to change book information. You will use this method most commonly to update the number of books in stock.
+Use `PATCH` with the `books` endpoint to change book information, most commonly when updating the number of copies in stock.
 
 **Note:** To add books that a store has not previously carried, use [POST books](post-books.md) instead.
 {: .notice--info}
 
 ## Request
 
-To update a book with `PATCH`, use a curl request similar to the following. Supply your server and port, and a valid book `id`:
+To update a book with `PATCH`, enter a request similar to the following, using a valid book `id` and your server and port:
 
 ```bash
 curl -X PATCH \
@@ -23,15 +23,15 @@ curl -X PATCH \
 
 ## Response
 
-The following sections list the success and error responses that the `PATCH books` method supports.
+The following sections describe possible responses from the `books` endpoint when using the `PATCH` method.
 
 ### Success response
 
-A successful `PATCH` returns `200 OK` along with the updated book object.
+A successful `PATCH` returns `200 OK` with the updated book object.
 
 ### Error responses
 
-An error response contains one of the following HTTP status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -43,4 +43,4 @@ An error response contains one of the following HTTP status codes.
 
 * [Books](books.md)
 * [POST books](post-books.md)
-* [DELETE books](reference/delete-books.md)
+* [DELETE books](delete-books.md)

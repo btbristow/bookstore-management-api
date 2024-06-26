@@ -6,11 +6,11 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use the `orders` endpoint to build order management features. The `orders` endpoint contains information about the other endpoints and is designed for custom requests. For example, get a list of books [ordered by a certain customer](get-orders.md).
+Use the `orders` endpoint for order management features. The `orders` endpoint contains information about the other endpoints and is designed for custom requests. For example, [get a list of books](../tutorials/orders-customer-date.md#step-1-get-orders-by-customer) purchased by one customer.
 
 ## Request
 
-To call the `orders` endpoint using curl, enter `curl -X GET {server_url}/orders` with your server and port.
+To call the `orders` endpoint, enter `curl -X GET {server_url}/orders` with your server and port.
 
 ## Response
 
@@ -38,18 +38,18 @@ The following sections contain an example response and property definitions.
 | **Property**  | **Type** | **Description**                                                     |
 |---------------|----------|---------------------------------------------------------------------|
 | `id`    | string   | Indicates the order's unique identifier.                            |
-| `order_date`  | string   | Indicates the order date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.                 |
+| `order_date`  | string   | Indicates the order date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>                |
 | `items`       | number   | Indicates the number of books ordered.                              |
 | `customer_id` | string   | Indicates the customer's unique identifier. |
 | `book_id`     | array    | In an array of strings, indicates the unique identifier(s) for the book(s) purchased.                                    |
-| `subtotal` | string   | Indicates the order subtotal in USD using dollars and cents, for example *8.70* or *25.02*. |
-| `tax` | string   | Indicates the sales tax in USD. The Bookstore Management API's test version applies 2024 [New York State sales tax](https://www.nyc.gov/site/finance/business/business-nys-sales-tax.page) of 8.875%, but you can pass in any percentage, calculated against the order `subtotal` property.   |
+| `subtotal` | string   | Indicates the order subtotal in USD with dollars and cents, for example *8.70* or *25.02*. |
+| `tax` | string   | Indicates the sales tax in USD. The test version of this API uses a [2024 New York State sales tax](https://www.nyc.gov/site/finance/business/business-nys-sales-tax.page) <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> of 8.875%, but you can apply any percentage using custom logic.   |
 | `subtotal` | string   | Indicates the order total in USD. |
 
 ## Methods
 
 The `orders` endpoint supports the following methods:
 
-* [POST orders](reference/post-orders.md)
-* [PATCH orders](reference/patch-orders.md)
-* [DELETE orders](reference/delete-orders.md)
+* [POST orders](post-orders.md)
+* [PATCH orders](patch-orders.md)
+* [DELETE orders](delete-orders.md)

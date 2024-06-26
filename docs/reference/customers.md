@@ -10,7 +10,7 @@ Use the `customers` endpoint when building customer management features. For exa
 
 ## Request
 
-To call the `customers` endpoint using curl, enter `curl -X GET {server_url}:{port}/customers` with your server and port.
+To call the `customers` endpoint, enter `curl -X GET {server_url}:{port}/customers` with your server and port.
 
 ## Response
 

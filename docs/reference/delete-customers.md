@@ -10,19 +10,19 @@ Use `DELETE` with the `customers` endpoint to remove customers from a store data
 
 ## Request
 
-To `DELETE` a customer object using curl, enter `curl -X DELETE http://{server_url}:{port}/customer/{id}` with your server and port and a valid customer `id`.
+To `DELETE` a customer, enter `curl -X DELETE http://{server_url}:{port}/customer/{id}` with your server and port and a valid customer `id`.
 
 ## Response
 
-The following sections list the success and error responses that the `DELETE customers` method supports.
+The following sections describe possible responses from the `customers` endpoint when using the `DELETE` method.
 
 ### Success response
 
-A successful `DELETE` returns `200 OK` along with the complete order object that was deleted.
+A successful `DELETE` returns `200 OK` with the deleted customer object.
 
 ### Error response
 
-An error response contains one of the following HTTP status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|

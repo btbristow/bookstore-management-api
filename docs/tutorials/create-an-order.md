@@ -6,7 +6,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-This tutorial takes about 20 minutes to complete and presents a standard order creation workflow. You start by listing the books in stock, add a new customer, and then create an order that references both the customer and the book purchased.
+This tutorial takes about 20 minutes to complete and presents a standard order creation workflow. You start by listing books in stock, add a new customer, and then create an order.
 
 ## Prerequisites
 
@@ -16,39 +16,36 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 ## Step 1: Get the book inventory
 
-To add a book to an order, you must know its `id`. We will use `GET` with the `/books` endpoint to obtain a list of example books. Then, we will choose a book to use in this tutorial.
+To add a book to an order, you must know its `id`. We will use `GET` with the `books` endpoint to obtain a list of books to choose from.
 
-1. To list the books in stock, enter `curl -X GET {server_url}:{port}/books`, using your own `{server_url}` and `{port}`:
+1. To list the books in stock, enter `curl -X GET {server_url}:{port}/books`, using your own server and port:
 
-    > **Tip:**
-    > For example, if using json-server, you might enter `curl -X GET localhost:3000/books`.
-
-    The Bookstore Management API returns a `200 OK` along with a response body in the following format:
+    The Bookstore Management API returns a `200 OK` and a response body in the following format:
 
     ```json
     {
-      "id": "5rzn",
-      "title": "Mastering the Art of French Cooking, Vol. 1",
-      "author_last_name": "Child",
-      "author_first_name": "Julia",
-      "publisher": "Knopf Doubleday Publishing Group",
-      "year_published": 2011,
-      "ISBN-10": 9780307958174,
-      "genre": "cookbooks",
+      "id": "8ajv",
+      "title": "Infinite Jest",
+      "author_last_name": "Wallace",
+      "author_first_name": "David Foster",
+      "publisher": "Little, Brown",
+      "year_published": 1996,
+      "ISBN-10": 9780316073851,
+      "genre": "fiction",
       "format": "hardcover",
-      "condition": "used",
-      "price": "9.99",
+      "condition": "new",
+      "price": "24.99",
       "in_stock": 2
     }
     ```
 
-1. Choose any book `id` and note it for later use in this tutorial.
+1. Choose a book `id` and note it for later use.
 
 ## Step 2: Create a customer
 
-When you create an order, you must specify a customer. We will use `POST` with the `/customers` endpoint to add a new customer who has not yet visited the store.
+When you create an order, you must specify a customer. We will use `POST` with the `customers` endpoint to add a new customer who has not yet visited the store.
 
-1. To create a customer, enter the following curl request:
+1. To create a customer, enter the following request:
 
     ```bash
     curl -X POST '{server_url}:{port}/customers' \
@@ -61,7 +58,7 @@ When you create an order, you must specify a customer. We will use `POST` with t
         }'
     ```
 
-    The Bookstore Management API returns a `201 Created`, along with a response body similar to the following:
+    The Bookstore Management API returns a `201 Created` and a response body similar to the following:
 
     ```json
     {
@@ -77,12 +74,13 @@ When you create an order, you must specify a customer. We will use `POST` with t
 
 ## Step 3: Create an order
 
-Now that you know the book and the customer, use `POST` with the `/orders` endpoint to create a new order.
+Now that you have a book and a customer, use `POST` with the `orders` endpoint to create a new order.
 
-> **Tip:**  
-> In the following example, `book_id` is an array. To add multiple books to an order, you might use `["9hne", "7dpc"]`, where each number is the `id` for one book.
+**Note:**  
+The `book_id` property value is an array. To add multiple books to an order, you might use `["9hne", "7dpc"]`, where each number is the `id` for one book.
+{: .notice--info}
 
-* To create an order, enter the following curl request. Use the value of book `id` in `book_id` and the value of customer `id` in `customer_id`:
+* To create an order, enter the following request. Add the value of book `id` to `book_id` and the value of customer `id` to `customer_id`.
 
     ```bash
     curl -X POST '{server_url}:{port}/orders' \
@@ -95,7 +93,7 @@ Now that you know the book and the customer, use `POST` with the `/orders` endpo
         }'
     ```
 
-    The Bookstore Management API returns a `201 Created`, along with a response body similar to the following:
+    The Bookstore Management API returns a `201 Created` and a response body similar to the following:
 
     ```json
     {
@@ -114,8 +112,8 @@ Now that you know the book and the customer, use `POST` with the `/orders` endpo
 
 ## What to do next
 
-Now that you know how to manage customers and orders, proceed with your integration or read other topics to learn more about the Bookstore Management API.
+Now that you know how to manage customers and orders, proceed with your integration or browse other tutorials to learn about the Bookstore Management API.
 
 * [Update a store](update-store.md)
 * [Get store inventory](get-store-inventory.md)
-* [Get orders by customer or date](tutorials/orders-customer-date.md)
+* [Get orders by customer or date](orders-customer-date.md)

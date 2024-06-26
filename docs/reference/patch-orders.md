@@ -10,7 +10,7 @@ Use `PATCH` with the `orders` endpoint to update order information. For example,
 
 ## Request
 
-To update an order with `PATCH`, use a curl request similar to the following, which adds an additional book. Supply your server and port and a valid order `id`:
+To update an order with `PATCH`, use a curl request similar to the following example, which adds an additional book. Supply your server and port and a valid order `id`:
 
 ```bash
 curl -X PATCH '{server_url}:{port}/orders/{id}' \
@@ -27,15 +27,15 @@ curl -X PATCH '{server_url}:{port}/orders/{id}' \
 
 ## Response
 
-The following sections list the success and error responses that the `PATCH orders` method supports.
+The following sections describe possible responses from the `orders` endpoint when using the `PATCH` method.
 
 ### Success response
 
-A successful `PATCH` returns `200 OK` along with the complete book object. This includes updated properties.
+A successful `PATCH` returns `200 OK` and the updated book object.
 
-### Error responses
+### Error response
 
-An error response contains one of the following HTTP response status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
@@ -45,6 +45,6 @@ An error response contains one of the following HTTP response status codes.
 
 ## Related Topics
 
-* [Orders](reference/orders.md)
-* [POST orders](reference/post-orders.md)
-* [DELETE orders](reference/delete-orders.md)
+* [Orders](orders.md)
+* [POST orders](post-orders.md)
+* [DELETE orders](delete-orders.md)

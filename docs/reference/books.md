@@ -6,11 +6,11 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use the `books` endpoint when building inventory management features. For example, add a form where booksellers enter new books from deliveries.
+Use the `books` endpoint when building inventory management features. For example, add a form where booksellers enter newly delivered books.
 
 ## Request
 
-To call the `books` endpoint using curl, enter `curl -X GET {server_url}{port}/books` with your server and port.
+To call the `books` endpoint, enter `curl -X GET {server_url}{port}/books` with your server and port.
 
 ## Response
 
@@ -19,19 +19,19 @@ The following sections contain an example response and property definitions.
 ### Response Example
 
 ```json
-    {
-      "id": "9hne",
-      "title": "The Mysteries of Pittsburgh",
-      "author_last_name": "Chabon",
-      "author_first_name": "Michael",
-      "publisher": "Open Road Media",
-      "year_published": 2011,
-      "ISBN-10": 9781453234099,
+   {
+      "id": "099c",
+      "title": "American Gods",
+      "author_last_name": "Gaiman",
+      "author_first_name": "Neil",
+      "publisher": "Harper Collins",
+      "year_published": 2002,
+      "ISBN-10": 9780380789030,
       "genre": "fiction",
-      "format": "hardcover",
+      "format": "paperback",
       "condition": "new",
-      "price": "24.99",
-      "in_stock": 2
+      "price": "15.99",
+      "in_stock": 5
     }
 ```
 
@@ -50,7 +50,7 @@ The following sections contain an example response and property definitions.
 | `format`            | string   | Indicates the book format as **paperback** or **hardcover**.                                    |
 | `condition`         | string   | Indicates if the book is **new** or **used**.                                           |
 | `price`             | string   | Indicates the book price in USD using dollars and cents, for example *9.99* or *24.99*                                            |
-| `in_stock`          | number   | Indicates the number of copies of the book in stock.                                                |
+| `in_stock`          | number   | Indicates the number of copies in stock. Note that books with `0` copies appear in `GET` requests.                          |
 
 ## Methods
 
@@ -58,4 +58,4 @@ The `books` endpoint supports the following methods:
 
 * [POST books](post-books.md)
 * [PATCH books](patch-books.md)
-* [DELETE books](reference/delete-books.md)
+* [DELETE books](delete-books.md)

@@ -6,7 +6,7 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-This tutorial takes about 15 minutes to complete and explains how to use query parameters with the `orders` endpoint to get orders by customer or order date.
+This tutorial takes about 10 minutes to complete and explains how to use query parameters with the `orders` endpoint to get orders from a single customer or order date.
 
 You can use query parameters with any endpoint in the Bookstore Management API.
 
@@ -18,9 +18,12 @@ To learn how to run the API locally, see [Test with JSON Server](test-with-json-
 
 ## Step 1: Get orders by customer
 
-To get orders by customer, obtain a customer's `id` from their email address and use it as a query parameter in a request to `/orders`.
+To get orders by customer, first obtain the customer's `id` from their email address.
 
-1. Enter `curl -X GET '{server_url}:{port}/customer?email=mjameson@gmail.com'`, using your own `{server_url}` and `{port}`.
+1. Enter `curl -X GET '{server_url}:{port}/customer?email={email}'` with your server and port.
+
+    **Tip:** If testing with JSON Server, `mjameson@gmail.com` is a valid email in the JSON database file.
+    {: .notice--success}
 
     The Bookstore Management API returns a `200 OK` with the following response body:
 
@@ -34,11 +37,9 @@ To get orders by customer, obtain a customer's `id` from their email address and
     }
     ```
 
-2. Enter `curl -X GET 'https://{server_url}:{port}/orders?customer_id=2ogb'`, using your own `{server_url}` and `{port}`.
+2. Enter `curl -X GET 'https://{server_url}:{port}/orders?customer_id=2ogb'` with a valid `id` such as `2ogb` and your server and port:
 
-    > Note: Use the customer `id` from your last request for the `customer_id` property.
-
-    The API returns a `200 OK` and a response body with an array of orders:
+    The API returns a `200 OK` and a response body in the following format:
 
     ```json
     [
@@ -72,9 +73,12 @@ To get orders by customer, obtain a customer's `id` from their email address and
 
 ## Step 2: View orders by date
 
-To view orders placed on a certain date, enter `curl -X GET '{server_url}:{port}/orders?date=2024-02-22'`, using your own `{server_url}` and `{port}`.
+To view orders placed on a certain date, enter `curl -X GET '{server_url}:{port}/orders?date={date}'` with your server and port.
 
-The Bookstore Management API returns a `200 OK` and a response body with an array of orders in the following format:
+**Tip:** If testing with JSON Server, `2024-02-22` is a valid order date in the JSON database file.
+{: .notice--success}
+
+The Bookstore Management API returns a `200 OK` and a response body in the following format:
 
 ```json
 [
@@ -96,5 +100,5 @@ The Bookstore Management API returns a `200 OK` and a response body with an arra
 ## Related Topics
 
 * [Get store inventory](get-store-inventory.md)
-* [Create an order](tutorials/create-an-order.md)
+* [Create an order](create-an-order.md)
 * [Update a store](update-store.md)

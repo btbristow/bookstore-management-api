@@ -6,11 +6,11 @@ toc_sticky: true
 sidebar:
   nav: "docs"
 ---
-Use `PATCH` with the `customers` endpoint to update customer information. For example, you might use this method to update a customer's email address.
+Use `PATCH` with the `customers` endpoint to update customer information, for example when upating a customer's email address.
 
 ## Request
 
-To update customer information using `PATCH`, enter a curl request similar to the following, along with your server and port:
+To update customer information using `PATCH`, enter a curl request similar to the following, with your server and port:
 
 ```bash
 curl -X PATCH \
@@ -21,15 +21,15 @@ curl -X PATCH \
 
 ## Response
 
-The following sections list the success and error responses that the `PATCH customers` method supports.
+The following sections describe possible responses from the `customers` endpoint when using the `PATCH` method.
 
 ### Success response
 
-A successful `PATCH` returns `200 OK` along with the complete customer object. This includes updated properties.
+A successful `PATCH` returns `200 OK` with the updated customer object.
 
 ### Error responses
 
-An error response contains one of the following HTTP status codes.
+An error contains one of the following HTTP status codes.
 
 | Status Code             | Description                                       |
 |-------------------------|---------------------------------------------------|
