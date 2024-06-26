@@ -22,7 +22,7 @@ To get orders by customer, first obtain the customer's `id` from their email add
 
 1. Enter `curl -X GET '{server_url}:{port}/customer?email={email}'` with your server and port.
 
-    **Tip:** If testing with JSON Server, `mjameson@gmail.com` is a valid email in the JSON database file.
+    **Tip:** If testing with JSON Server, `mjameson@gmail.com` is a valid email in the database file.
     {: .notice--success}
 
     The Bookstore Management API returns a `200 OK` with the following response body:
@@ -75,7 +75,7 @@ To get orders by customer, first obtain the customer's `id` from their email add
 
 To view orders placed on a certain date, enter `curl -X GET '{server_url}:{port}/orders?date={date}'` with your server and port.
 
-**Tip:** If testing with JSON Server, `2024-02-22` is a valid order date in the JSON database file.
+**Tip:** If testing with JSON Server, `2024-02-22` is a valid order date in the database file.
 {: .notice--success}
 
 The Bookstore Management API returns a `200 OK` and a response body in the following format:

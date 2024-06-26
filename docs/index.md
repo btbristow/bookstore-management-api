@@ -18,14 +18,14 @@ This documentation contains everything you need to test and implement the Bookst
 
 ## Get Started
 
-Start by using a mock API service to send your first request.
+Install a mock API service and send your first request.
 
 * [Test with JSON Server](tutorials/test-with-json-server.md) — Test locally with no integration.
 * [Get store inventory](tutorials/get-store-inventory.md) — Get an example list of books in stock.
 
 ## Tutorials
 
-Review common workflows before building them into your app.
+Review common workflows and build them into your app.
 
 * [Create an order](tutorials/create-an-order.md) — Get a book and create a customer; use them in a new order.
 * [Update a store](tutorials/update-store.md) — Update the books in stock; edit customer and order details.
@@ -33,7 +33,7 @@ Review common workflows before building them into your app.
 
 ## Reference
 
-Review reference topics for the Bookstore Management API's three endpoints.
+Review endpoints, methods, code samples, and status codes.
 
 ### Books endpoint
 
@@ -53,7 +53,7 @@ The **[customers endpoint](reference/customers.md)** connects to your customer d
 
 ### Orders endpoint
 
-The **[Orders endpoint](reference/orders.md)** supports your order management and point-of-sale systems.
+The **[orders endpoint](reference/orders.md)** supports order management and point-of-sale systems.
 
 * [POST orders](reference/post-orders.md)
 * [PATCH orders](reference/patch-orders.md)
