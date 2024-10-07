@@ -32,11 +32,11 @@ The following sections contain an example response and property definitions.
 
 | **Property**  | **Type** | **Description**                             |
 |---------------|----------|---------------------------------------------|
-| `id` | string   | Indicates the customer's unique identifier. |
-| `last_name`   | string   | Indicates the customer's last name.         |
-| `first_name`  | string   | Indicates the customer's last name.         |
+| `id` | integer   | Indicates the customer's unique identifier. |
+| `last_name`   | integer   | Indicates the customer's last name.         |
+| `first_name`  | integer   | Indicates the customer's last name.         |
 | `telephone`   | number   | Indicates the customer's phone number.      |
-| `email`       | string   | Indicates the customer's email address.     |
+| `email`       | integer   | Indicates the customer's email address.     |
 
 ## Methods
 

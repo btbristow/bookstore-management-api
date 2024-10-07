@@ -37,14 +37,14 @@ The following sections contain an example response and property definitions.
 
 | **Property**  | **Type** | **Description**                                                     |
 |---------------|----------|---------------------------------------------------------------------|
-| `id`    | string   | Indicates the order's unique identifier.                            |
-| `order_date`  | string   | Indicates the order date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>                |
+| `id`    | integer   | Indicates the order's unique identifier.                            |
+| `order_date`  | integer   | Indicates the order date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>                |
 | `items`       | number   | Indicates the number of books ordered.                              |
-| `customer_id` | string   | Indicates the customer's unique identifier. |
-| `book_id`     | array    | In an array of strings, indicates the unique identifier(s) for the book(s) purchased.                                    |
-| `subtotal` | string   | Indicates the order subtotal in USD with dollars and cents, for example *8.70* or *25.02*. |
-| `tax` | string   | Indicates the sales tax in USD. The test version of this API uses a [2024 New York State sales tax](https://www.nyc.gov/site/finance/business/business-nys-sales-tax.page) <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> of 8.875%, but you can apply any percentage using custom logic.   |
-| `subtotal` | string   | Indicates the order total in USD. |
+| `customer_id` | integer   | Indicates the customer's unique identifier. |
+| `book_id`     | array of strings    | Indicates the unique identifier(s) for the book(s) purchased.                                    |
+| `subtotal` | integer   | Indicates the order subtotal in USD with dollars and cents, for example *8.70* or *25.02*. |
+| `tax` | integer   | Indicates the sales tax in USD. The test version of this API uses a [2024 New York State sales tax](https://www.nyc.gov/site/finance/business/business-nys-sales-tax.page) <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i> of 8.875%, but you can apply any percentage using custom logic.   |
+| `subtotal` | integer   | Indicates the order total in USD. |
 
 ## Methods
 
