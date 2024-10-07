@@ -45,12 +45,12 @@ The following sections contain an example response and property definitions.
 | `author_first_name` | string   | Indicates the author's first name.                                                              |
 | `publisher`         | string   | Indicates the book publisher.                                                                   |
 | `year_published`    | string   | Indicates the year the edition was published.                                                   |
-| `ISBN-10`           | number   | Indicates the ISBN-10 number. ISBN-13 is not supported.                                         |
+| `ISBN-10`           | integer   | Indicates the ISBN-10 number. ISBN-13 is not supported.                                         |
 | `genre`             | string   | Indicates the book genre, for example, **nonfiction**.                                           |
 | `format`            | string   | Indicates the book format as **paperback** or **hardcover**.                                    |
 | `condition`         | string   | Indicates if the book is **new** or **used**.                                           |
 | `price`             | string   | Indicates the book price in USD using dollars and cents, for example *9.99* or *24.99*                                            |
-| `in_stock`          | number   | Indicates the number of copies in stock. Note that books with `0` copies appear in `GET` requests.                          |
+| `in_stock`          | integer   | Indicates the number of copies in stock. Note that books with `0` copies appear in `GET` requests.                          |
 
 ## Methods
 
